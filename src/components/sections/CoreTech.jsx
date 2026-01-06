@@ -197,7 +197,7 @@ const CoreTech = ({ lang }) => {
                                 fontWeight: '700',
                                 marginBottom: '20px'
                             }}>
-                                {i === 0 ? 'PATENTED' : i === 1 ? 'MECHANISM' : 'CLINICAL'}
+                                {i === 0 ? 'TECHNOLOGY' : i === 1 ? 'MECHANISM' : 'CLINICAL'}
                             </div>
 
                             {/* Icon/Visual - Integrated */}
