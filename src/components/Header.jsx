@@ -1,8 +1,12 @@
-import React from 'react';
-import { Menu } from 'lucide-react';
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header = ({ lang, setLang }) => {
-    const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const languages = [
         { code: 'en', label: 'EN' },
@@ -13,21 +17,42 @@ const Header = ({ lang, setLang }) => {
         { code: 'jp', label: 'JP' }
     ];
 
+    const menuItems = [
+        { path: '/brand-story', label: 'BRAND STORY' },
+        { path: '/technology', label: 'TECHNOLOGY' },
+        { path: '/ingredients', label: 'INGREDIENTS' }
+    ];
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+        if (!isMenuOpen) {
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    };
+
+    const handleNavigation = (path) => {
+        navigate(path);
+        setIsMenuOpen(false);
+        document.body.style.overflow = 'unset';
+    };
+
     return (
         <header className="header">
-            <div className="container flex-center" style={{ justifyContent: 'space-between', height: '80px' }}>
-                <div className="logo" style={{ fontSize: '24px', fontWeight: '700', fontFamily: 'var(--font-serif)', color: 'var(--color-burgundy)' }}>
+            <div className="container flex-center" style={{ justifyContent: 'space-between', height: '80px', position: 'relative', zIndex: 1001 }}>
+                <Link to="/" className="logo" style={{ fontSize: '24px', fontWeight: '700', fontFamily: 'var(--font-serif)', color: 'var(--color-burgundy)', textDecoration: 'none', zIndex: 1002 }}>
                     DUALYN
-                </div>
+                </Link>
 
-                <div className="flex-center" style={{ gap: '20px' }}>
+                <div className="flex-center" style={{ gap: '20px', zIndex: 1002 }}>
                     {/* Language Dropdown */}
                     <div style={{ position: 'relative' }}>
                         <button
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                             style={{
                                 background: 'none',
-                                border: '1px solid var(--color-burgundy)',
+                                border: `1px solid ${isMenuOpen ? 'var(--color-burgundy)' : 'var(--color-burgundy)'}`,
                                 borderRadius: '9999px',
                                 padding: '8px 20px',
                                 color: 'var(--color-burgundy)',
@@ -99,11 +124,88 @@ const Header = ({ lang, setLang }) => {
                         )}
                     </div>
 
-                    <button style={{ background: 'none', border: 'none', color: 'var(--color-burgundy)' }}>
-                        <Menu size={24} />
+                    {/* Hamburger Menu Button */}
+                    <button
+                        onClick={toggleMenu}
+                        style={{
+                            background: 'none',
+                            border: 'none',
+                            color: 'var(--color-burgundy)',
+                            cursor: 'pointer',
+                            zIndex: 1005,
+                            position: 'relative',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            width: '40px',
+                            height: '40px'
+                        }}
+                    >
+                        {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
                 </div>
             </div>
+
+            {/* Full Screen Menu Overlay */}
+            <div style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100vw',
+                height: '100vh',
+                background: 'white',
+                zIndex: 1000,
+                transform: isMenuOpen ? 'translateY(0)' : 'translateY(-100%)',
+                opacity: isMenuOpen ? 1 : 0,
+                transition: 'transform 0.5s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.3s ease',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                paddingTop: '60px'
+            }}>
+                <nav style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '40px',
+                    textAlign: 'center'
+                }}>
+                    {menuItems.map((item, index) => (
+                        <a
+                            key={index}
+                            onClick={() => handleNavigation(item.path)} // Use navigate for internal routing
+                            style={{
+                                fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+                                fontFamily: 'var(--font-serif)',
+                                color: 'var(--color-burgundy)',
+                                textDecoration: 'none',
+                                fontWeight: '700',
+                                cursor: 'pointer',
+                                position: 'relative',
+                                opacity: isMenuOpen ? 1 : 0,
+                                transform: isMenuOpen ? 'translateY(0)' : 'translateY(20px)',
+                                transition: `all 0.5s ease ${0.1 + index * 0.1}s`,
+                                letterSpacing: '-0.02em'
+                            }}
+                            onMouseEnter={(e) => e.target.style.fontStyle = 'italic'}
+                            onMouseLeave={(e) => e.target.style.fontStyle = 'normal'}
+                        >
+                            {item.label}
+                        </a>
+                    ))}
+                </nav>
+
+                <div style={{
+                    position: 'absolute',
+                    bottom: '60px',
+                    opacity: 0.5,
+                    fontSize: '0.9rem',
+                    letterSpacing: '0.1em'
+                }}>
+                    © 2026 BIOBIJOU
+                </div>
+            </div>
+
             <style>{`
         .header {
           position: fixed;
