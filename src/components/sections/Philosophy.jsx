@@ -21,6 +21,11 @@ const Philosophy = ({ lang }) => {
             subtitle: "الفلسفة",
             headline: "ما وراء المكونات",
             body: "تُستخدم مكونات لا حصر لها لتجديد البشرة. ومع ذلك، نسأل: 'ما مقدار هذا المكون الذي يتم توصيله بالفعل إلى الجلد؟' تركز DUALYN على هيكل التوصيل، وليس فقط مستويات المكونات."
+        },
+        vn: {
+            subtitle: "Triết lý",
+            headline: "Hơn cả Thành phần",
+            body: "Vô số thành phần được sử dụng để tái tạo da. Tuy nhiên, chúng tôi đặt câu hỏi: 'Bao nhiêu phần của thành phần này thực sự được đưa vào da?' DUALYN tập trung vào cấu trúc dẫn truyền, không chỉ là hàm lượng thành phần."
         }
     };
 

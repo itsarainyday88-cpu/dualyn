@@ -25,6 +25,12 @@ const Evidence = ({ lang }) => {
             title: "نتائج مثبتة",
             desc: "تسريع استعادة الأنسجة من خلال تآزر HA+PN.",
             chart: "مقارنة معدل هجرة الخلايا (Wound Healing Assay)"
+        },
+        vn: {
+            subtitle: "Bằng chứng",
+            title: "Kết quả Đã được Chứng minh",
+            desc: "Tăng tốc phục hồi mô thông qua sự hiệp đồng của HA+PN.",
+            chart: "So sánh Tốc độ Di chuyển Tế bào (Thử nghiệm Chữa lành Vết thương)"
         }
     };
 

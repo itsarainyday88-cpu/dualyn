@@ -5,7 +5,8 @@ const Footer = ({ lang }) => {
         kr: { inquiry: '글로벌 파트너십 문의', btn: '공식 홈페이지 문의하기' },
         en: { inquiry: 'Global Partnership Inquiry', btn: 'Contact via Official Website' },
         th: { inquiry: 'ติดต่อความร่วมมือทางธุรกิจ', btn: 'ติดต่อผ่านเว็บไซต์ทางการ' },
-        ar: { inquiry: 'استفسار عن الشراكة العالمية', btn: 'تواصل عبر الموقع الرسمي' }
+        ar: { inquiry: 'استفسار عن الشراكة العالمية', btn: 'تواصل عبر الموقع الرسمي' },
+        vn: { inquiry: 'Yêu cầu Đối tác Toàn cầu', btn: 'Liên hệ qua Website Chính thức' }
     };
     const text = content[lang] || content.en;
 

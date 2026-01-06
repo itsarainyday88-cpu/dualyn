@@ -41,6 +41,16 @@ const DualSystem = ({ lang }) => {
                 { title: "Multi-HA", desc: "ترطيب فوري + ترطيب مستدام" },
                 { title: "Vitamin B12", desc: "ينشط عملية التمثيل الغذائي لطاقة الخلية", highlight: true }
             ]
+        },
+        vn: {
+            subtitle: "Hệ thống Kép",
+            title: "Tức thì & Lâu dài",
+            items: [
+                { title: "microPDRN", desc: "Kích thích phản ứng tế bào ban đầu" },
+                { title: "PN", desc: "Cải thiện mô lâu dài" },
+                { title: "Multi-HA", desc: "Cấp nước tức thì + dưỡng ẩm bền vững" },
+                { title: "Vitamin B12", desc: "Kích hoạt chuyển hóa năng lượng tế bào", highlight: true }
+            ]
         }
     };
 

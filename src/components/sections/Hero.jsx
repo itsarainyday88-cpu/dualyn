@@ -21,6 +21,11 @@ const Hero = ({ lang }) => {
             subtitle: "المعيار الجديد",
             title: "اعتز بانعكاسك اليوم،\nوترقب مرونة الغد.",
             desc: "إعادة تعريف معايير التجديد."
+        },
+        vn: {
+            subtitle: "Tiêu chuẩn Mới",
+            title: "Trân trọng Hình ảnh Hôm nay,\nMong chờ Sự Phục hồi của Ngày mai",
+            desc: "Định nghĩa lại tiêu chuẩn của sự tái tạo"
         }
     };
 

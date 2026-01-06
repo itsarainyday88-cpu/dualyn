@@ -45,6 +45,17 @@ const Ingredients = ({ lang }) => {
                 { label: "Polynucleotide (PN)", value: "0.10 %", sub: "دعامة خلوية" },
                 { label: "Cyanocobalamin (Vit B12)", value: "0.0005 %", sub: "درجة نقاء عالية" }
             ]
+        },
+        vn: {
+            title: "Thông số Kỹ thuật",
+            subtitle: "DỮ LIỆU CÔNG THỨC",
+            specs: [
+                { label: "miPDRN Complex", value: "5 mg/mL", sub: "0.50% microPDRN" },
+                { label: "Sodium Hyaluronate (High)", value: "1.80 %", sub: "18mg/mL Phân tử Cao" },
+                { label: "Sodium Hyaluronate (Low)", value: "0.50 %", sub: "Phân tử Thấp Tối ưu hóa" },
+                { label: "Polynucleotide (PN)", value: "0.10 %", sub: "Khung Tế bào" },
+                { label: "Cyanocobalamin (Vit B12)", value: "0.0005 %", sub: "Cấp độ Tinh khiết Cao" }
+            ]
         }
     };
 

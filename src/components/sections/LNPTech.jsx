@@ -42,6 +42,16 @@ const LNPTech = ({ lang }) => {
                 { title: "امتصاص خلوي عالي", eng: "Enhanced Absorption" },
                 { title: "التوافق الحيوي", eng: "Skin Friendly" }
             ]
+        },
+        vn: {
+            title: "Vượt qua Thành phần,\nĐổi mới trong Dẫn truyền",
+            subtitle: "HỆ THỐNG DẪN TRUYỀN THẾ HỆ 3",
+            desc: "Vượt qua giới hạn của liposome, công nghệ LNP thế hệ thứ 3\ndẫn truyền chính xác các thành phần Dual-Layer của DUALYN qua lớp sừng đến lớp đáy.",
+            features: [
+                { title: "Độ ổn định vượt trội", eng: "Molecular Stability" },
+                { title: "Hấp thụ tế bào cao", eng: "Enhanced Absorption" },
+                { title: "Tương thích sinh học", eng: "Skin Friendly" }
+            ]
         }
     };
 

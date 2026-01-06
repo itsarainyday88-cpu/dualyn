@@ -47,6 +47,17 @@ const CoreTech = ({ lang }) => {
                 { icon: <Zap size={24} />, title: "السرعة", desc: "سرعة امتصاص فائقة" },
                 { icon: <Activity size={24} />, title: "التجديد", desc: "استجابة خلوية قصوى" }
             ]
+        },
+        vn: {
+            subtitle: "Công nghệ Cốt lõi",
+            headline: "microPDRN™",
+            keyMessage: "Chúng tôi không chỉ thêm thành phần.\nChúng tôi thiết kế lại cấu trúc hấp thụ.",
+            comparison: { conventional: "PDRN Truyền thống (Bị chặn ở bề mặt)", micro: "microPDRN™ (Thâm nhập sâu)" },
+            features: [
+                { icon: <Microscope size={24} />, title: "25bp", desc: "Cấu trúc dưới 25bp" },
+                { icon: <Zap size={24} />, title: "Speed", desc: "Tốc độ hấp thụ vượt trội" },
+                { icon: <Activity size={24} />, title: "Regeneration", desc: "Phản ứng tế bào tối đa" }
+            ]
         }
     };
 
