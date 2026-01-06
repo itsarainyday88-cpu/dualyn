@@ -97,7 +97,7 @@ const Hero = ({ lang }) => {
                         paddingBottom: '5px'
                     }}>{text.subtitle}</p>
                     <h1 style={{
-                        fontSize: 'clamp(5rem, 9vw, 8.5rem)',
+                        fontSize: 'clamp(3.5rem, 9vw, 6rem)',
                         lineHeight: '1',
                         marginBottom: '40px',
                         color: 'white', /* White for Main Title on Dark BG */
@@ -165,9 +165,6 @@ const Hero = ({ lang }) => {
             }
             #hero-text p {
                 margin: 0 auto 20px !important;
-            }
-            #hero-text h1 {
-                font-size: 3.5rem !important; /* Smaller on mobile */
             }
             .hero-visual {
                 order: 2;
