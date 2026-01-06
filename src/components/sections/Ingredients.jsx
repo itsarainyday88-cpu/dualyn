@@ -74,67 +74,7 @@ const Ingredients = ({ lang }) => {
                     width: '100%'
                 }}>
                     {text.specs.map((item, index) => (
-                        <div key={index} className="spec-card" style={{
-                            background: 'white',
-                            padding: '30px',
-                            borderRadius: '24px', /* Soft commercial curve */
-                            boxShadow: '0 10px 30px rgba(0,0,0,0.03)',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'space-between',
-                            height: '100%',
-                            transition: 'transform 0.3s ease',
-                            border: '1px solid rgba(0,0,0,0.03)'
-                        }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.transform = 'translateY(-5px)';
-                                e.currentTarget.style.boxShadow = '0 20px 40px rgba(99, 13, 22, 0.1)';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.transform = 'translateY(0)';
-                                e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.03)';
-                            }}
-                        >
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
-                                <h4 style={{
-                                    fontSize: '1.25rem',
-                                    fontWeight: '700',
-                                    color: '#2c2c2c',
-                                    fontFamily: 'var(--font-body)',
-                                    maxWidth: '70%'
-                                }}>{item.label}</h4>
-                                <span className="pill-tag" style={{
-                                    fontSize: '0.75rem',
-                                    padding: '4px 12px',
-                                    background: '#f2d5d7',
-                                    color: 'var(--color-burgundy)',
-                                    fontWeight: '700',
-                                    borderRadius: '9999px',
-                                    whiteSpace: 'nowrap'
-                                }}>SPEC</span>
-                            </div>
-
-                            <div style={{ textAlign: 'right', marginTop: 'auto' }}>
-                                <span style={{
-                                    display: 'block',
-                                    fontFamily: 'var(--font-body)', /* Ensure Pretendard/Sans for modern look */
-                                    fontSize: '3rem', /* Massive Impact */
-                                    fontWeight: '800',
-                                    color: 'var(--color-burgundy)',
-                                    lineHeight: '1',
-                                    letterSpacing: '-0.02em'
-                                }}>
-                                    {item.value}
-                                </span>
-                                <span style={{
-                                    fontSize: '0.9rem',
-                                    color: '#666',
-                                    fontWeight: '500',
-                                    marginTop: '5px',
-                                    display: 'block'
-                                }}>{item.sub}</span>
-                            </div>
-                        </div>
+                        <SpecCard key={index} item={item} />
                     ))}
                 </div>
 
@@ -146,6 +86,94 @@ const Ingredients = ({ lang }) => {
 
             </div>
         </section>
+    );
+};
+
+const SpecCard = ({ item }) => {
+    const [isPpm, setIsPpm] = React.useState(false);
+
+    // Check if the value is a percentage
+    const isPercentage = item.value.includes('%');
+
+    // Calculate display value
+    let displayValue = item.value;
+    if (isPercentage && isPpm) {
+        const numValue = parseFloat(item.value);
+        if (!isNaN(numValue)) {
+            // 1% = 10,000 ppm
+            displayValue = `${(numValue * 10000).toLocaleString()} ppm`;
+        }
+    }
+
+    return (
+        <div className="spec-card" style={{
+            background: 'white',
+            padding: '30px',
+            borderRadius: '24px', /* Soft commercial curve */
+            boxShadow: '0 10px 30px rgba(0,0,0,0.03)',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            height: '100%',
+            transition: 'transform 0.3s ease',
+            border: '1px solid rgba(0,0,0,0.03)',
+            cursor: isPercentage ? 'pointer' : 'default',
+            userSelect: 'none'
+        }}
+            onClick={() => isPercentage && setIsPpm(!isPpm)}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(99, 13, 22, 0.1)';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.03)';
+            }}
+        >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
+                <h4 style={{
+                    fontSize: '1.25rem',
+                    fontWeight: '700',
+                    color: '#2c2c2c',
+                    fontFamily: 'var(--font-body)',
+                    maxWidth: '70%'
+                }}>{item.label}</h4>
+                <span className="pill-tag" style={{
+                    fontSize: '0.75rem',
+                    padding: '4px 12px',
+                    background: '#f2d5d7',
+                    color: 'var(--color-burgundy)',
+                    fontWeight: '700',
+                    borderRadius: '9999px',
+                    whiteSpace: 'nowrap'
+                }}>SPEC</span>
+            </div>
+
+            <div style={{ textAlign: 'right', marginTop: 'auto' }}>
+                <span style={{
+                    display: 'block',
+                    fontFamily: 'var(--font-body)', /* Ensure Pretendard/Sans for modern look */
+                    fontSize: '3rem', /* Massive Impact */
+                    fontWeight: '800',
+                    color: 'var(--color-burgundy)',
+                    lineHeight: '1',
+                    letterSpacing: '-0.02em',
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    opacity: isPpm ? 0.8 : 1,
+                    transform: isPpm ? 'scale(0.95)' : 'scale(1)',
+                    transformOrigin: 'right center'
+                }}>
+                    {displayValue}
+                </span>
+                <span style={{
+                    fontSize: '0.9rem',
+                    color: '#666',
+                    fontWeight: '500',
+                    marginTop: '5px',
+                    display: 'block'
+                }}>{item.sub}</span>
+            </div>
+        </div>
     );
 };
 
