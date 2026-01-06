@@ -13,6 +13,18 @@ const Evidence = ({ lang }) => {
             title: "Proven Results",
             desc: "Accelerated tissue recovery through the synergy of HA+PN.",
             chart: "Cell Migration Rate Comparison (Wound Healing Assay)"
+        },
+        th: {
+            subtitle: "หลักฐาน",
+            title: "ผลลัพธ์ที่พิสูจน์แล้ว",
+            desc: "เร่งการฟื้นฟูเนื้อเยื่อผ่านการทำงานร่วมกันของ HA+PN",
+            chart: "เปรียบเทียบอัตราการเคลื่อนที่ของเซลล์ (Wound Healing Assay)"
+        },
+        ar: {
+            subtitle: "الأدلة",
+            title: "نتائج مثبتة",
+            desc: "تسريع استعادة الأنسجة من خلال تآزر HA+PN.",
+            chart: "مقارنة معدل هجرة الخلايا (Wound Healing Assay)"
         }
     };
 

@@ -23,6 +23,28 @@ const Ingredients = ({ lang }) => {
                 { label: "Polynucleotide (PN)", value: "0.10 %", sub: "Cellular Scaffold" },
                 { label: "Cyanocobalamin (Vit B12)", value: "0.0005 %", sub: "High Purity Grade" }
             ]
+        },
+        th: {
+            title: "ข้อมูลจำเพาะทางเทคนิค",
+            subtitle: "ข้อมูลสูตร",
+            specs: [
+                { label: "miPDRN Complex", value: "5 mg/mL", sub: "0.50% microPDRN" },
+                { label: "Sodium Hyaluronate (High)", value: "1.80 %", sub: "18mg/mL โมเลกุลสูง" },
+                { label: "Sodium Hyaluronate (Low)", value: "0.50 %", sub: "โมเลกุลต่ำที่เหมาะสม" },
+                { label: "Polynucleotide (PN)", value: "0.10 %", sub: "โครงสร้างเซลล์" },
+                { label: "Cyanocobalamin (Vit B12)", value: "0.0005 %", sub: "เกรดความบริสุทธิ์สูง" }
+            ]
+        },
+        ar: {
+            title: "المواصفات الفنية",
+            subtitle: "بيانات التركيبة",
+            specs: [
+                { label: "miPDRN Complex", value: "5 mg/mL", sub: "0.50% microPDRN" },
+                { label: "Sodium Hyaluronate (High)", value: "1.80 %", sub: "18 ملغ/مل جزيئي عالي" },
+                { label: "Sodium Hyaluronate (Low)", value: "0.50 %", sub: "جزيئي منخفض محسن" },
+                { label: "Polynucleotide (PN)", value: "0.10 %", sub: "دعامة خلوية" },
+                { label: "Cyanocobalamin (Vit B12)", value: "0.0005 %", sub: "درجة نقاء عالية" }
+            ]
         }
     };
 

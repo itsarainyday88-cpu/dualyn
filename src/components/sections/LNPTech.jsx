@@ -22,6 +22,26 @@ const LNPTech = ({ lang }) => {
                 { title: "High Cell Uptake", eng: "Enhanced Absorption" },
                 { title: "Biocompatibility", eng: "Skin Friendly" }
             ]
+        },
+        th: {
+            title: "เหนือกว่าส่วนผสม\nนวัตกรรมแห่งการส่งผ่าน",
+            subtitle: "ระบบส่งผ่านรุ่นที่ 3",
+            desc: "ก้าวข้ามขีดจำกัดของไลโปโซมด้วยเทคโนโลยี LNP รุ่นที่ 3\nส่งผ่านส่วนผสม Dual-Layer ของ DUALYN ผ่านชั้นผิวหนังกำพร้าสู่ชั้นฐานได้อย่างแม่นยำ",
+            features: [
+                { title: "ความเสถียรที่เหนือกว่า", eng: "Molecular Stability" },
+                { title: "การดูดซึมเข้าเซลล์สูง", eng: "Enhanced Absorption" },
+                { title: "ความเข้ากันได้ทางชีวภาพ", eng: "Skin Friendly" }
+            ]
+        },
+        ar: {
+            title: "ما وراء المكونات،\nابتكار في التوصيل",
+            subtitle: "نظام توصيل الجيل الثالث",
+            desc: "تجاوز حدود الليبوسومات، تقنية LNP من الجيل الثالث\nتوصل مكونات DUALYN مزدوجة الطبقة بدقة عبر الطبقة القرنية إلى الطبقة القاعدية.",
+            features: [
+                { title: "ثبات فائق", eng: "Molecular Stability" },
+                { title: "امتصاص خلوي عالي", eng: "Enhanced Absorption" },
+                { title: "التوافق الحيوي", eng: "Skin Friendly" }
+            ]
         }
     };
 

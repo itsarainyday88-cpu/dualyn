@@ -11,6 +11,16 @@ const Hero = ({ lang }) => {
             subtitle: "The New Standard",
             title: "Cherish Today’s Reflection, Anticipate Tomorrow’s Resilience.",
             desc: "Redefining the standard of regeneration."
+        },
+        th: {
+            subtitle: "มาตรฐานใหม่",
+            title: "ชื่นชมเงาสะท้อนของวันนี้\nรอคอยความยืดหยุ่นของวันพรุ่งนี้",
+            desc: "นิยามใหม่ของมาตรฐานการฟื้นฟู"
+        },
+        ar: {
+            subtitle: "المعيار الجديد",
+            title: "اعتز بانعكاسك اليوم،\nوترقب مرونة الغد.",
+            desc: "إعادة تعريف معايير التجديد."
         }
     };
 

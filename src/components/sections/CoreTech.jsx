@@ -25,6 +25,28 @@ const CoreTech = ({ lang }) => {
                 { icon: <Zap size={24} />, title: "Speed", desc: "Superior absorption speed" },
                 { icon: <Activity size={24} />, title: "Regeneration", desc: "Maximized cell response" }
             ]
+        },
+        th: {
+            subtitle: "เทคโนโลยีหลัก",
+            headline: "microPDRN™",
+            keyMessage: "เราไม่ได้แค่เพิ่มส่วนผสม\nแต่เราออกแบบโครงสร้างการดูดซึมใหม่",
+            comparison: { conventional: "PDRN ทั่วไป (ถูกบล็อกที่ผิว)", micro: "microPDRN™ (ซึมลึก)" },
+            features: [
+                { icon: <Microscope size={24} />, title: "25bp", desc: "โครงสร้างเล็กกว่า 25bp" },
+                { icon: <Zap size={24} />, title: "Speed", desc: "ความเร็วในการดูดซึมที่เหนือกว่า" },
+                { icon: <Activity size={24} />, title: "Regeneration", desc: "ตอบสนองต่อเซลล์สูงสุด" }
+            ]
+        },
+        ar: {
+            subtitle: "التقنية الأساسية",
+            headline: "microPDRN™",
+            keyMessage: "نحن لا نضيف المكونات فحسب.\nبل نعيد تصميم هيكل الامتصاص.",
+            comparison: { conventional: "PDRN تقليدي (سطح مسدود)", micro: "microPDRN™ (اختراق عميق)" },
+            features: [
+                { icon: <Microscope size={24} />, title: "25bp", desc: "هيكل أقل من 25bp" },
+                { icon: <Zap size={24} />, title: "السرعة", desc: "سرعة امتصاص فائقة" },
+                { icon: <Activity size={24} />, title: "التجديد", desc: "استجابة خلوية قصوى" }
+            ]
         }
     };
 

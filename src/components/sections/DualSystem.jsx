@@ -21,6 +21,26 @@ const DualSystem = ({ lang }) => {
                 { title: "Multi-HA", desc: "Immediate hydration + sustained moisture" },
                 { title: "Vitamin B12", desc: "Activates cell energy metabolism", highlight: true }
             ]
+        },
+        th: {
+            subtitle: "ระบบคู่ขนาน",
+            title: "เห็นผลทันที & ยั่งยืน",
+            items: [
+                { title: "microPDRN", desc: "กระตุ้นการตอบสนองของเซลล์ในระยะแรก" },
+                { title: "PN", desc: "ปรับปรุงเนื้อเยื่อและคงความยืดหยุ่นในระยะยาว" },
+                { title: "Multi-HA", desc: "เติมน้ำทันที + ชุ่มชื้นยาวนาน" },
+                { title: "Vitamin B12", desc: "กระตุ้นการเผาผลาญพลังงานของเซลล์", highlight: true }
+            ]
+        },
+        ar: {
+            subtitle: "نظام مزدوج",
+            title: "فوري ودائم",
+            items: [
+                { title: "microPDRN", desc: "يحفز الاستجابة الخلوية الأولية" },
+                { title: "PN", desc: "تحسين الأنسجة على المدى الطويل" },
+                { title: "Multi-HA", desc: "ترطيب فوري + ترطيب مستدام" },
+                { title: "Vitamin B12", desc: "ينشط عملية التمثيل الغذائي لطاقة الخلية", highlight: true }
+            ]
         }
     };
 

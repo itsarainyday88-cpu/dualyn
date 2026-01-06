@@ -1,12 +1,20 @@
 import React from 'react';
 
 const Footer = ({ lang }) => {
+    const content = {
+        kr: { inquiry: '글로벌 파트너십 문의', btn: '공식 홈페이지 문의하기' },
+        en: { inquiry: 'Global Partnership Inquiry', btn: 'Contact via Official Website' },
+        th: { inquiry: 'ติดต่อความร่วมมือทางธุรกิจ', btn: 'ติดต่อผ่านเว็บไซต์ทางการ' },
+        ar: { inquiry: 'استفسار عن الشراكة العالمية', btn: 'تواصل عبر الموقع الرسمي' }
+    };
+    const text = content[lang] || content.en;
+
     return (
         <footer style={{ background: 'var(--color-burgundy)', color: 'white', padding: '80px 0', textAlign: 'center' }}>
             <div className="container">
                 <h2 style={{ color: 'white', marginBottom: '20px' }}>DUALYN</h2>
                 <p style={{ opacity: 0.7, marginBottom: '40px' }}>
-                    {lang === 'kr' ? '글로벌 파트너십 문의' : 'Global Partnership Inquiry'}
+                    {text.inquiry}
                 </p>
                 {/* Action Button - Pill Shape & Hover Fill */}
                 <a href="http://biobijou.co.kr/sub4/inquiry.php" target="_blank" rel="noreferrer"
@@ -32,7 +40,7 @@ const Footer = ({ lang }) => {
                         e.currentTarget.style.color = 'white';
                     }}
                 >
-                    {lang === 'kr' ? '공식 홈페이지 문의하기' : 'Contact via Official Website'}
+                    {text.btn}
                 </a>
 
                 <div style={{ marginTop: '60px', fontSize: '0.8rem', opacity: 0.5 }}>

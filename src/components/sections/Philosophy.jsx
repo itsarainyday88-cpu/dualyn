@@ -11,6 +11,16 @@ const Philosophy = ({ lang }) => {
             subtitle: "Philosophy",
             headline: "Beyond Ingredients",
             body: "Countless ingredients are used for skin regeneration. However, we ask: 'How much of this ingredient is actually delivered to the skin?' DUALYN focuses on the delivery structure, not just the ingredient levels."
+        },
+        th: {
+            subtitle: "ปรัชญา",
+            headline: "มากกว่าส่วนผสม",
+            body: "ส่วนผสมนับไม่ถ้วนถูกนำมาใช้เพื่อการฟื้นฟูผิว แต่เราตั้งคำถามว่า: 'ส่วนผสมเหล่านี้ถูกส่งเข้าสู่ผิวจริงเท่าไหร่?' DUALYN มุ่งเน้นไปที่โครงสร้างการส่งผ่าน ไม่ใช่แค่ระดับของส่วนผสม"
+        },
+        ar: {
+            subtitle: "الفلسفة",
+            headline: "ما وراء المكونات",
+            body: "تُستخدم مكونات لا حصر لها لتجديد البشرة. ومع ذلك، نسأل: 'ما مقدار هذا المكون الذي يتم توصيله بالفعل إلى الجلد؟' تركز DUALYN على هيكل التوصيل، وليس فقط مستويات المكونات."
         }
     };
 
