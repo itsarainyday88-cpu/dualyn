@@ -9,7 +9,7 @@ const Hero = ({ lang }) => {
         },
         en: {
             subtitle: "The New Standard",
-            title: "Breaking the Limits\nof Absorption.\nDUALYN",
+            title: "Cherish Today’s Reflection, Anticipate Tomorrow’s Resilience.",
             desc: "Redefining the standard of regeneration."
         }
     };
