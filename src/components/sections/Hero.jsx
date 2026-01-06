@@ -4,7 +4,7 @@ const Hero = ({ lang }) => {
     const content = {
         kr: {
             subtitle: "The New Standard",
-            title: "흡수의 한계를\n다시 쪼개다.\nDUALYN",
+            title: "오늘의 거울이 반갑고,\n내일의 탄력이 기다려지는 이유",
             desc: "재생의 기준을 새롭게 정의합니다."
         },
         en: {
