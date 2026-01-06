@@ -26,6 +26,11 @@ const Hero = ({ lang }) => {
             subtitle: "Tiêu chuẩn Mới",
             title: "Trân trọng Hình ảnh Hôm nay,\nMong chờ Sự Phục hồi của Ngày mai",
             desc: "Định nghĩa lại tiêu chuẩn của sự tái tạo"
+        },
+        jp: {
+            subtitle: "吸収性PDRNの新基準",
+            title: "吸収の限界を\n打ち破る",
+            desc: "皮膚のバリアを越えて深層へ届く\n圧倒的な浸透力の差をご体験ください。"
         }
     };
 
