@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Zap, Activity, Microscope } from 'lucide-react';
+import micropdrnImage from '../../assets/micropdrn_penetration.png';
 
 const CoreTech = ({ lang }) => {
     const content = {
@@ -7,7 +8,7 @@ const CoreTech = ({ lang }) => {
             subtitle: "Core Tech",
             headline: "microPDRN™",
             keyMessage: "성분을 추가하지 않습니다.\n흡수의 구조를 다시 설계합니다.",
-            comparison: { conventional: "Conventional PDRN", micro: "microPDRN" },
+            comparison: { conventional: "Conventional PDRN (Blocked Surface)", micro: "microPDRN™ (Deep Penetration)" },
             features: [
                 { icon: <Microscope size={24} />, title: "25bp", desc: "25bp 이하 초저분자 구조" },
                 { icon: <Zap size={24} />, title: "Speed", desc: "압도적인 흡수 속도" },
@@ -18,7 +19,7 @@ const CoreTech = ({ lang }) => {
             subtitle: "Core Tech",
             headline: "microPDRN™",
             keyMessage: "We don't just add ingredients.\nWe redesign the absorption structure.",
-            comparison: { conventional: "Conventional PDRN", micro: "microPDRN" },
+            comparison: { conventional: "Conventional PDRN (Blocked Surface)", micro: "microPDRN™ (Deep Penetration)" },
             features: [
                 { icon: <Microscope size={24} />, title: "25bp", desc: "Under 25bp structure" },
                 { icon: <Zap size={24} />, title: "Speed", desc: "Superior absorption speed" },
@@ -58,85 +59,61 @@ const CoreTech = ({ lang }) => {
                     </div>
                 </div>
 
-                {/* Minimalist Schematic Comparison */}
+                {/* New 3D Simulation Graphic */}
                 <div style={{
+                    marginBottom: '80px',
+                    padding: '0 20px',
                     display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    gap: '80px',
-                    marginBottom: '100px',
-                    padding: '60px 0',
-                    borderTop: '1px solid rgba(0,0,0,0.05)',
-                    borderBottom: '1px solid rgba(0,0,0,0.05)'
+                    flexDirection: 'column',
+                    alignItems: 'center'
                 }}>
+                    <div style={{
+                        maxWidth: '900px',
+                        width: '100%',
+                        borderRadius: '24px',
+                        overflow: 'hidden',
+                        boxShadow: '0 30px 60px rgba(99, 13, 22, 0.2)',
+                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                        position: 'relative'
+                    }}>
+                        <img
+                            src={micropdrnImage}
+                            alt="Conventional PDRN vs microPDRN Penetration Comparison"
+                            style={{
+                                width: '100%',
+                                display: 'block',
+                                objectFit: 'cover'
+                            }}
+                        />
 
-                    {/* Conventional Left */}
-                    <div className="text-center" style={{ opacity: 0.5 }}>
-                        <div style={{
-                            width: '200px', height: '200px',
-                            borderRadius: '50%',
-                            border: '1px solid #ddd',
-                            background: 'white',
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            margin: '0 auto 25px',
-                            position: 'relative',
-                            overflow: 'hidden'
-                        }}>
-                            {/* Heavy, dense lines representing large molecules */}
-                            <svg width="100%" height="100%" viewBox="0 0 100 100" style={{ transform: 'scale(1.5)' }}>
-                                <path d="M10,10 Q30,40 50,10 T90,10" fill="none" stroke="#999" strokeWidth="3" />
-                                <path d="M-10,30 Q20,60 50,30 T110,30" fill="none" stroke="#999" strokeWidth="4" />
-                                <path d="M0,50 Q40,80 60,50 T100,50" fill="none" stroke="#999" strokeWidth="3" />
-                                <path d="M10,70 Q30,90 50,70 T90,70" fill="none" stroke="#999" strokeWidth="5" />
-                                <path d="M20,90 Q50,60 80,90" fill="none" stroke="#999" strokeWidth="4" />
-                            </svg>
-                        </div>
-                        <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.1rem', letterSpacing: '0.05em' }}>{text.comparison.conventional}</p>
+                        {/* Overlay Labels (Optional - if image doesn't have them, or to enforce the specific text requested) */}
+                        {/* Using a caption bar below instead for cleaner look with the detailed requested text */}
                     </div>
 
-                    <div style={{ height: '100px', borderLeft: '1px solid #ddd', transform: 'rotate(15deg)' }}></div>
-
-                    {/* microPDRN Right */}
-                    <div className="text-center">
-                        <div style={{
-                            width: '200px', height: '200px',
-                            borderRadius: '50%',
-                            border: '1px solid var(--color-burgundy)',
-                            background: 'white',
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            margin: '0 auto 25px',
-                            position: 'relative',
-                            boxShadow: '0 20px 40px rgba(99, 13, 22, 0.05)'
-                        }}>
-                            {/* Fine, elegant lines representing micro molecules (25bp) */}
-                            <svg width="100%" height="100%" viewBox="0 0 100 100" className="micro-structure">
-                                <circle cx="50" cy="50" r="40" fill="none" stroke="var(--color-rose)" strokeWidth="0.5" opacity="0.5" />
-                                <circle cx="50" cy="50" r="30" fill="none" stroke="var(--color-rose)" strokeWidth="0.5" opacity="0.7" />
-                                {[...Array(12)].map((_, i) => (
-                                    <line
-                                        key={i}
-                                        x1="50" y1="50"
-                                        x2={50 + 35 * Math.cos(i * 30 * Math.PI / 180)}
-                                        y2={50 + 35 * Math.sin(i * 30 * Math.PI / 180)}
-                                        stroke="var(--color-burgundy)"
-                                        strokeWidth="0.5"
-                                        strokeDasharray="2 2"
-                                    />
-                                ))}
-                                <circle cx="50" cy="50" r="2" fill="var(--color-burgundy)" />
-
-                                {/* Orbiting Particles */}
-                                <g className="orbiting-particles">
-                                    <circle r="1.5" fill="var(--color-orange)">
-                                        <animateMotion dur="4s" repeatCount="indefinite" path="M 0,-30 A 30,30 0 1,1 0,30 A 30,30 0 1,1 0,-30" />
-                                    </circle>
-                                    <circle r="1.5" fill="var(--color-orange)">
-                                        <animateMotion dur="6s" repeatCount="indefinite" path="M 0,-20 A 20,20 0 1,0 0,20 A 20,20 0 1,0 0,-20" />
-                                    </circle>
-                                </g>
-                            </svg>
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        width: '100%',
+                        maxWidth: '900px',
+                        marginTop: '25px',
+                        padding: '0 10px'
+                    }}>
+                        <div style={{ width: '45%', textAlign: 'center' }}>
+                            <p style={{
+                                fontFamily: 'var(--font-serif)',
+                                fontSize: '1.1rem',
+                                color: '#666',
+                                fontWeight: '500'
+                            }}>{text.comparison.conventional}</p>
                         </div>
-                        <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.2rem', fontWeight: '600', color: 'var(--color-burgundy)', letterSpacing: '0.05em' }}>{text.comparison.micro}</p>
+                        <div style={{ width: '45%', textAlign: 'center' }}>
+                            <p style={{
+                                fontFamily: 'var(--font-serif)',
+                                fontSize: '1.2rem',
+                                color: 'var(--color-burgundy)',
+                                fontWeight: '700'
+                            }}>{text.comparison.micro}</p>
+                        </div>
                     </div>
                 </div>
 
@@ -247,11 +224,6 @@ const CoreTech = ({ lang }) => {
                 </div>
             </div>
             <style>{`
-        .orbiting-particles {
-            transform-origin: 50px 50px;
-            animation: spin 20s linear infinite;
-        }
-        @keyframes spin { 100% { transform: rotate(360deg); } }
       `}</style>
         </section >
     );
