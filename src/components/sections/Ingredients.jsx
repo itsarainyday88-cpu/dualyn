@@ -101,7 +101,8 @@ const Ingredients = ({ lang }) => {
 };
 
 const SpecCard = ({ item }) => {
-    const [isPpm, setIsPpm] = React.useState(false);
+    // Default to displaying ppm (true)
+    const [isPpm, setIsPpm] = React.useState(true);
 
     // Check if the value is a percentage
     const isPercentage = item.value.includes('%');
