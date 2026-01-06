@@ -26,6 +26,11 @@ const Philosophy = ({ lang }) => {
             subtitle: "Triết lý",
             headline: "Hơn cả Thành phần",
             body: "Vô số thành phần được sử dụng để tái tạo da. Tuy nhiên, chúng tôi đặt câu hỏi: 'Bao nhiêu phần của thành phần này thực sự được đưa vào da?' DUALYN tập trung vào cấu trúc dẫn truyền, không chỉ là hàm lượng thành phần."
+        },
+        jp: {
+            subtitle: "開発哲学",
+            headline: "肌の健康のための\n革新",
+            body: "肌の再生のために数多くの成分が使用されています。しかし、私たちは問いかけます。「この成分は実際にどれだけ肌に届いているのか？」DUALYNは成分の数値ではなく、伝達構造の数値に注目します。"
         }
     };
 

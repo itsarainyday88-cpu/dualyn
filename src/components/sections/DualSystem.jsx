@@ -51,6 +51,16 @@ const DualSystem = ({ lang }) => {
                 { title: "Multi-HA", desc: "Cấp nước tức thì + dưỡng ẩm bền vững" },
                 { title: "Vitamin B12", desc: "Kích hoạt chuyển hóa năng lượng tế bào", highlight: true }
             ]
+        },
+        jp: {
+            subtitle: "デュアルシステム",
+            title: "即効性と持続性",
+            items: [
+                { title: "microPDRN", desc: "初期細胞反応を誘導" },
+                { title: "PN", desc: "長期的な組織改善と弾力維持" },
+                { title: "Multi-HA", desc: "即時の水分供給 + 持続的な保湿" },
+                { title: "Vitamin B12", desc: "細胞エネルギー代謝の活性化", highlight: true }
+            ]
         }
     };
 

@@ -6,7 +6,8 @@ const Footer = ({ lang }) => {
         en: { inquiry: 'Global Partnership Inquiry', btn: 'Contact via Official Website', brochure: 'Brochure' },
         th: { inquiry: 'ติดต่อความร่วมมือทางธุรกิจ', btn: 'ติดต่อผ่านเว็บไซต์ทางการ', brochure: 'โบรชัวร์' },
         ar: { inquiry: 'استفسار عن الشراكة العالمية', btn: 'تواصل عبر الموقع الرسمي', brochure: 'الكتيب' },
-        vn: { inquiry: 'Yêu cầu Đối tác Toàn cầu', btn: 'Liên hệ qua Website Chính thức', brochure: 'Tài liệu' }
+        vn: { inquiry: 'Yêu cầu Đối tác Toàn cầu', btn: 'Liên hệ qua Website Chính thức', brochure: 'Tài liệu' },
+        jp: { inquiry: 'グローバルパートナーシップのお問い合わせ', btn: '公式サイトから問い合わせる', brochure: 'パンフレット' }
     };
     const text = content[lang] || content.en;
 

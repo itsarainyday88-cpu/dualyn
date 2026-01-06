@@ -31,6 +31,12 @@ const Evidence = ({ lang }) => {
             title: "Kết quả Đã được Chứng minh",
             desc: "Tăng tốc phục hồi mô thông qua sự hiệp đồng của HA+PN.",
             chart: "So sánh Tốc độ Di chuyển Tế bào (Thử nghiệm Chữa lành Vết thương)"
+        },
+        jp: {
+            subtitle: "エビデンス",
+            title: "実証された効果",
+            desc: "HA+PNの相乗効果による組織回復の加速。",
+            chart: "細胞移動速度の比較 (創傷治癒アッセイ)"
         }
     };
 

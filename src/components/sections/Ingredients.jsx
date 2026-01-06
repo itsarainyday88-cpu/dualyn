@@ -56,6 +56,17 @@ const Ingredients = ({ lang }) => {
                 { label: "Polynucleotide (PN)", value: "0.10 %", sub: "Khung Tế bào" },
                 { label: "Cyanocobalamin (Vit B12)", value: "0.0005 %", sub: "Cấp độ Tinh khiết Cao" }
             ]
+        },
+        jp: {
+            title: "技術仕様",
+            subtitle: "処方データ",
+            specs: [
+                { label: "miPDRN Complex", value: "5 mg/mL", sub: "0.50% microPDRN" },
+                { label: "Sodium Hyaluronate (High)", value: "1.80 %", sub: "18mg/mL 高分子" },
+                { label: "Sodium Hyaluronate (Low)", value: "0.50 %", sub: "低分子最適化" },
+                { label: "Polynucleotide (PN)", value: "0.10 %", sub: "細胞足場" },
+                { label: "Cyanocobalamin (Vit B12)", value: "0.0005 %", sub: "高純度グレード" }
+            ]
         }
     };
 

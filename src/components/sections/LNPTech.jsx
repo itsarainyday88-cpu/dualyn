@@ -52,6 +52,16 @@ const LNPTech = ({ lang }) => {
                 { title: "Hấp thụ tế bào cao", eng: "Enhanced Absorption" },
                 { title: "Tương thích sinh học", eng: "Skin Friendly" }
             ]
+        },
+        jp: {
+            title: "成分を超えて、\nデリバリーの革新へ",
+            subtitle: "第3世代デリバリーシステム",
+            desc: "リポソームの限界を超え、第3世代LNP技術が\nDUALYNのDual-Layer成分を角質層を通過して基底層まで正確に届けます。",
+            features: [
+                { title: "優れた安定性", eng: "Molecular Stability" },
+                { title: "高い細胞吸収率", eng: "Enhanced Absorption" },
+                { title: "生体適合性", eng: "Skin Friendly" }
+            ]
         }
     };
 

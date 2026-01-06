@@ -58,6 +58,17 @@ const CoreTech = ({ lang }) => {
                 { icon: <Zap size={24} />, title: "Speed", desc: "Tốc độ hấp thụ vượt trội" },
                 { icon: <Activity size={24} />, title: "Regeneration", desc: "Phản ứng tế bào tối đa" }
             ]
+        },
+        jp: {
+            subtitle: "コアテクノロジー",
+            headline: "microPDRN™",
+            keyMessage: "成分を加えるだけではありません。\n吸収の構造を再設計します。",
+            comparison: { conventional: "従来のPDRN (表面でブロック)", micro: "microPDRN™ (深層浸透)" },
+            features: [
+                { icon: <Microscope size={24} />, title: "25bp", desc: "25bp以下の微細構造" },
+                { icon: <Zap size={24} />, title: "Speed", desc: "圧倒的な吸収速度" },
+                { icon: <Activity size={24} />, title: "Regeneration", desc: "細胞反応の最大化" }
+            ]
         }
     };
 

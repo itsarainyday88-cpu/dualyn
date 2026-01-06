@@ -9,7 +9,8 @@ const Header = ({ lang, setLang }) => {
         { code: 'kr', label: 'KR' },
         { code: 'th', label: 'TH' },
         { code: 'ar', label: 'AR' },
-        { code: 'vn', label: 'VN' }
+        { code: 'vn', label: 'VN' },
+        { code: 'jp', label: 'JP' }
     ];
 
     return (
