@@ -39,10 +39,10 @@ const Evidence = ({ lang }) => {
     return (
         <section className="section bg-light-rose"> {/* Alternating: Light Rose */}
             <div className="container">
-                <div className="grid-cols-2">
-                    <div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '40px', justifyContent: 'center' }}>
+                    <div style={{ flex: '1 1 300px' }}>
                         <span style={{ color: 'var(--color-burgundy)', fontWeight: '600' }}>{text.subtitle}</span>
-                        <h2 style={{ fontSize: '3rem', marginBottom: '20px' }}>{text.title}</h2>
+                        <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 3rem)', marginBottom: '20px' }}>{text.title}</h2>
                         <p style={{ fontSize: '1.2rem', marginBottom: '40px' }}>{text.desc}</p>
 
                         <div style={{ marginTop: '40px' }}>
@@ -58,10 +58,12 @@ const Evidence = ({ lang }) => {
                         </div>
                     </div>
 
-                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: '1 1 300px' }}>
                         <div style={{
-                            width: '350px',
-                            height: '350px',
+                            width: '100%',
+                            maxWidth: '350px',
+                            height: 'auto',
+                            aspectRatio: '1 / 1',
                             borderRadius: '50%',
                             border: '10px solid white',
                             boxShadow: '0 10px 30px rgba(0,0,0,0.1)',

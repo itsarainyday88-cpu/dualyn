@@ -72,13 +72,13 @@ const CoreTech = ({ lang }) => {
                 {/* Header Area */}
                 <div className="text-center" style={{ marginBottom: '50px' }}> {/* Reduced from 80px */}
                     <span style={{ color: 'var(--color-burgundy)', letterSpacing: '3px', fontWeight: '700', fontSize: '1rem', textTransform: 'uppercase' }}>{text.subtitle}</span>
-                    <h2 style={{ fontSize: '5rem', marginTop: '10px', marginBottom: '30px', fontFamily: 'var(--font-serif)', color: 'var(--color-burgundy)', lineHeight: '1' }}>{text.headline}</h2> {/* Increased size to 5rem, reduced margins */}
+                    <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginTop: '10px', marginBottom: '30px', fontFamily: 'var(--font-serif)', color: 'var(--color-burgundy)', lineHeight: '1' }}>{text.headline}</h2> {/* Increased size to 5rem, reduced margins */}
 
                     {/* Refined Philosophy Statement */}
                     <div style={{ position: 'relative', padding: '20px 0' }}> {/* Reduced padding from 40px */}
                         <div style={{ width: '2px', height: '30px', background: 'var(--color-burgundy)', margin: '0 auto 20px', opacity: 0.4 }}></div> {/* Thicker, shorter line */}
                         <h3 style={{
-                            fontSize: 'clamp(1.8rem, 3vw, 2.4rem)',
+                            fontSize: 'clamp(1.5rem, 4vw, 2.4rem)',
                             lineHeight: '1.5',
                             fontFamily: 'var(--font-serif)',
                             fontStyle: 'italic',

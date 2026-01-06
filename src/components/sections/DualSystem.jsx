@@ -67,7 +67,7 @@ const DualSystem = ({ lang }) => {
                     }}>
                         FULL FACE PROTOCOL
                     </span>
-                    <h2 style={{ fontSize: '3.5rem', color: 'var(--color-burgundy)', marginBottom: '10px' }}>{text.title}</h2>
+                    <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', color: 'var(--color-burgundy)', marginBottom: '10px' }}>{text.title}</h2>
                     <p style={{ fontSize: '1.2rem', color: '#666', maxWidth: '600px', margin: '0 auto' }}>{text.desc}</p>
                 </div>
 

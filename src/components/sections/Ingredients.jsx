@@ -80,7 +80,7 @@ const Ingredients = ({ lang }) => {
                 {/* Spec Grid - CDL Style White Cards */}
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', /* Responsive 2-column */
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', /* Optimized for mobile */
                     gap: '20px',
                     width: '100%'
                 }}>
