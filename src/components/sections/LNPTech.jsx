@@ -1,0 +1,170 @@
+import React from 'react';
+import { Shield, Activity, Zap } from 'lucide-react';
+
+const LNPTech = ({ lang }) => {
+    const content = {
+        kr: {
+            title: "성분을 넘어, 전달의 혁신으로",
+            subtitle: "3rd GENERATION DELIVERY SYSTEM",
+            desc: "리포좀의 한계를 넘어 각질층을 통과하는 3세대 LNP 기술이\n듀알린의 Dual-Layer 성분을 피부 기저층까지 정밀하게 배달합니다.",
+            features: [
+                { title: "우수한 안정성", eng: "Superior Stability" },
+                { title: "높은 세포 흡수율", eng: "High Cell Uptake" },
+                { title: "생체 적합성", eng: "Biocompatibility" }
+            ]
+        },
+        en: {
+            title: "Beyond Ingredients,\nInnovation in Delivery",
+            subtitle: "3rd GENERATION DELIVERY SYSTEM",
+            desc: "Beyond the limitations of liposomes, 3rd generation LNP technology\nprecisely delivers DUALYN's Dual-Layer ingredients through the stratum corneum to the basal layer.",
+            features: [
+                { title: "Superior Stability", eng: "Molecular Stability" },
+                { title: "High Cell Uptake", eng: "Enhanced Absorption" },
+                { title: "Biocompatibility", eng: "Skin Friendly" }
+            ]
+        }
+    };
+
+    const text = content[lang];
+
+    return (
+        <section className="section bg-white" style={{ padding: '100px 0' }}>
+            <div className="container">
+
+                {/* Header */}
+                <div className="text-center" style={{ marginBottom: '80px' }}>
+                    <span className="pill-tag" style={{
+                        background: '#f2d5d7', color: 'var(--color-burgundy)',
+                        padding: '6px 16px', fontWeight: '700', fontSize: '0.8rem',
+                        marginBottom: '20px', display: 'inline-block'
+                    }}>
+                        {text.subtitle}
+                    </span>
+                    <h2 style={{
+                        fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                        color: 'var(--color-burgundy)',
+                        whiteSpace: 'pre-line',
+                        lineHeight: '1.2'
+                    }}>
+                        {text.title}
+                    </h2>
+                    <p style={{
+                        fontSize: '1.2rem',
+                        color: '#666',
+                        marginTop: '30px',
+                        whiteSpace: 'pre-line',
+                        lineHeight: '1.8'
+                    }}>
+                        {text.desc}
+                    </p>
+                </div>
+
+                {/* Graphic Visual - LNP vs Liposome */}
+                <div style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    marginBottom: '80px',
+                    position: 'relative'
+                }}>
+                    <div style={{
+                        width: '100%',
+                        maxWidth: '800px',
+                        height: '400px',
+                        background: '#F9F9F9',
+                        borderRadius: '30px',
+                        border: '1px solid #eee',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        boxShadow: '0 20px 60px rgba(0,0,0,0.05)'
+                    }}>
+                        {/* Placeholder for "3rd Generation Delivery System" Graphic */}
+                        {/* In a real scenario, this would be a custom illustration */}
+                        <div style={{ textAlign: 'center', opacity: 0.5 }}>
+                            <div style={{
+                                display: 'flex',
+                                gap: '60px',
+                                alignItems: 'center'
+                            }}>
+                                {/* Liposome (Old) */}
+                                <div style={{ opacity: 0.4, transform: 'scale(0.8)' }}>
+                                    <div style={{
+                                        width: '150px', height: '150px',
+                                        borderRadius: '50%', border: '4px dashed #999',
+                                        display: 'flex', alignItems: 'center', justifyContent: 'center'
+                                    }}>
+                                        <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Liposome</span>
+                                    </div>
+                                    <p style={{ marginTop: '15px' }}>2nd Gen</p>
+                                </div>
+
+                                {/* Arrow */}
+                                <div style={{ fontSize: '2rem', color: 'var(--color-burgundy)' }}>➔</div>
+
+                                {/* LNP (New) */}
+                                <div>
+                                    <div style={{
+                                        width: '180px', height: '180px',
+                                        borderRadius: '50%',
+                                        background: 'radial-gradient(circle at 30% 30%, #f2d5d7, var(--color-burgundy))',
+                                        boxShadow: '0 10px 30px rgba(99, 13, 22, 0.3)',
+                                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                        color: 'white'
+                                    }}>
+                                        <span style={{ fontSize: '2rem', fontWeight: '800' }}>LNP</span>
+                                    </div>
+                                    <p style={{ marginTop: '15px', fontWeight: 'bold', color: 'var(--color-burgundy)' }}>3rd Gen</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Metric Capsules */}
+                <div style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    gap: '30px',
+                    flexWrap: 'wrap'
+                }}>
+                    {text.features.map((item, index) => (
+                        <div key={index} style={{
+                            background: 'white',
+                            border: '1px solid #f2d5d7',
+                            borderRadius: '50px', /* Capsule Shape */
+                            padding: '20px 40px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '15px',
+                            boxShadow: '0 10px 20px rgba(99, 13, 22, 0.05)',
+                            transition: 'transform 0.3s ease',
+                            cursor: 'default'
+                        }}
+                            onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+                            onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                        >
+                            <div style={{
+                                background: 'var(--color-burgundy)',
+                                borderRadius: '50%',
+                                width: '40px', height: '40px',
+                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                color: 'white'
+                            }}>
+                                {index === 0 ? <Shield size={20} /> : index === 1 ? <Zap size={20} /> : <Activity size={20} />}
+                            </div>
+                            <div>
+                                <h4 style={{ margin: 0, fontSize: '1.1rem', color: 'var(--color-burgundy)', fontWeight: '700' }}>{item.title}</h4>
+                                <span style={{ fontSize: '0.8rem', color: '#999' }}>{item.eng}</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+            </div>
+        </section>
+    );
+};
+
+export default LNPTech;

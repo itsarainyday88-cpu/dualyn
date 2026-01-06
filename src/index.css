@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    /* Main Palette */
+    --color-burgundy: #630d16;
+    --color-rose: #f2d5d7;
+    --color-orange: #ff6b35;
+    --color-bg: #FCFAF9;
+    --color-text: #1A1A1A;
+    --color-white: #ffffff;
+    --font-serif: "Cormorant Garamond", serif;
+    --font-body: "Pretendard", "Inter", sans-serif;
+
+    /* Animation */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    /* Soft Warm Grey */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    font-weight: 400;
+    /* Regular weight for better legibility at larger size */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-serif);
+    color: var(--color-burgundy);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    /* Tighter tracking for headlines */
+}
+
+button {
+    font-family: var(--font-body);
+    cursor: pointer;
+}
+
+/* Global Design Refinement - Commercial Premium (CDL Style) */
+button,
+input,
+textarea,
+select,
+.btn,
+.card,
+.box,
+div {
+    /* Reset generic div radius, but enforce for specific UI elements */
+    border-radius: 0;
+}
+
+/* Enforce Pill Shape for Interactive Elements */
+button,
+.btn,
+input,
+select,
+.pill-tag,
+.rounded-full {
+    border-radius: 9999px !important;
+}
+
+/* Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Larger horizontal padding for safe area */
+
+.section {
+    padding: 80px 0;
+    /* Reduced to ~60% of previous spacious padding */
+    position: relative;
+    border-bottom: 0.5px solid rgba(99, 13, 22, 0.2);
+    /* Thin Burgundy Separator */
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+/* Typography Scales - High Density Commercial */
+h1 {
+    font-size: clamp(4rem, 8vw, 7rem);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    /* Tighter */
+    font-family: var(--font-body);
+    font-weight: 800;
+}
+
+h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-family: var(--font-body);
+    letter-spacing: -0.03em;
+    /* Tighter */
+}
+
+h3 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+p,
+li,
+.body-text {
+    font-size: 1.15rem;
+    color: var(--color-text);
+    letter-spacing: -0.015em;
+    /* Commercial legibility */
+}
+
+/* Background Utilities */
+.bg-white {
+    background-color: var(--color-white);
+}
+
+.bg-light-rose {
+    background-color: #fff8f8;
+    /* Very subtle Rose tint */
+}
+
+.bg-warm-grey {
+    background-color: #F7F7F7;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-cols-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    /* Restored gap slightly for the tighter container */
+}
+
+@media (min-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+.bg-burgundy {
+    background-color: var(--color-burgundy);
+    color: var(--color-white);
+}
+
+.bg-rose {
+    background-color: var(--color-rose);
+}
+
+.text-burgundy {
+    color: var(--color-burgundy);
+}
+
+.text-orange {
+    color: var(--color-orange);
+}
