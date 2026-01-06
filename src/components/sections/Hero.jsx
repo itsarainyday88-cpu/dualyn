@@ -103,7 +103,7 @@ const Hero = ({ lang }) => {
                         color: 'white', /* White for Main Title on Dark BG */
                         textShadow: '0 20px 40px rgba(0, 0, 0, 0.3)',
                         whiteSpace: 'pre-line',
-                        letterSpacing: '-0.04em',
+                        letterSpacing: '-0.02em',
                         fontWeight: '800'
                     }}>
                         {text.title}
