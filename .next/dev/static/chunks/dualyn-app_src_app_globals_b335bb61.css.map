@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/BIOBIJOU/.gemini/AI%20STUDY/Website/dualyn-app/src/app/globals.css"],"sourcesContent":["@tailwind base;\r\n@tailwind components;\r\n@tailwind utilities;\r\n\r\n:root {\r\n  --color-burgundy: #800020;\r\n  --font-serif: 'Times New Roman', serif;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  overflow-x: hidden;\r\n}\r\n\r\n.container {\r\n  max-width: 1200px;\r\n  margin: 0 auto;\r\n  padding: 0 20px;\r\n}\r\n.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }\r\n\n.bg-light-rose { background-color: #fff0f5; }\n\r\n"],"names":[],"mappings":"AAAA;;AACA;;AACA;;AAEA;;;;;AAKA;;;;;;AAMA;;;;;;AAKA;;;;;;;;;;;;AAEA"}}]
-}

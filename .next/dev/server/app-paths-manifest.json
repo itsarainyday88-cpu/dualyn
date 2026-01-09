@@ -1,8 +1,0 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/brand-story/page": "app/brand-story/page.js",
-  "/ingredients/page": "app/ingredients/page.js",
-  "/page": "app/page.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
-  "/technology/page": "app/technology/page.js"
-}
