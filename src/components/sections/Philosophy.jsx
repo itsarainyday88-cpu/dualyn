@@ -35,7 +35,7 @@ const Philosophy = ({ lang }) => {
         }
     };
 
-    const text = content[lang];
+    const text = content[lang] || content['en'];
 
     return (
         <section className="section bg-white" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '120px 0' }}>
