@@ -19,28 +19,24 @@ const Ingredients = ({ lang: propLang }) => {
         },
         en: {
             title: "Technical Specification",
-            subtitle: "Formulation Data",
-            desc: "Optimized complex formulation for maximum synergy.",
+            subtitle: "FORMULATION DATA",
             specs: [
-                { label: "PDRN Content", value: "1%", sub: "10,000 ppm" },
-                { label: "Molecular Weight", value: "30-50", sub: "kDa (microPDRN)" },
-                { label: "pH Balance", value: "7.0", sub: "Neutral" },
-                { label: "Viscosity", value: "Low", sub: "High fluidity" },
-                { label: "HA Content", value: "1.5%", sub: "High molecular weight" },
-                { label: "Appearance", value: "Pink", sub: "Transparent liquid (Vit B12)" }
+                { label: "miPDRN Complex", value: "5 mg/mL", sub: "0.50% microPDRN" },
+                { label: "Sodium Hyaluronate (High)", value: "1.80 %", sub: "18mg/mL High Molecular" },
+                { label: "Sodium Hyaluronate (Low)", value: "0.50 %", sub: "Low Molecular Optimized" },
+                { label: "Polynucleotide (PN)", value: "0.10 %", sub: "Cellular Scaffold" },
+                { label: "Cyanocobalamin (Vit B12)", value: "0.0005 %", sub: "High Purity Grade" }
             ]
         },
         cn: {
             title: "技术规格",
             subtitle: "配方数据",
-            desc: "为最大协同效应而优化的复合配方。",
             specs: [
-                { label: "PDRN 含量", value: "1%", sub: "10,000 ppm" },
-                { label: "分子量", value: "30-50", sub: "kDa (microPDRN)" },
-                { label: "pH 平衡", value: "7.0", sub: "中性" },
-                { label: "粘度", value: "低", sub: "高流动性" },
-                { label: "HA 含量", value: "1.5%", sub: "高分子量" },
-                { label: "外观", value: "粉色", sub: "透明液体 (Vit B12)" }
+                { label: "miPDRN 复合物", value: "5 mg/mL", sub: "0.50% microPDRN" },
+                { label: "透明质酸钠 (高分子)", value: "1.80 %", sub: "18mg/mL 高分子量" },
+                { label: "透明质酸钠 (低分子)", value: "0.50 %", sub: "低分子优化" },
+                { label: "多核苷酸 (PN)", value: "0.10 %", sub: "细胞支架" },
+                { label: "氰钴胺 (Vit B12)", value: "0.0005 %", sub: "高纯度等级" }
             ]
         },
         th: {

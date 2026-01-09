@@ -90,7 +90,7 @@ const Evidence = ({ lang: propLang }) => {
                                         <span style={{ fontSize: '1.2rem', fontWeight: '700' }}>98.7% ± 1.5</span>
                                     </div>
                                     <div style={{ width: '100%', background: '#eee', height: '24px', borderRadius: '12px', position: 'relative', overflow: 'visible' }}>
-                                        <div style={{ width: '98.7%', height: '100%', background: 'linear-gradient(90deg, #ffb74d, var(--color-orange))', borderRadius: '12px 0 0 12px', position: 'relative' }}>
+                                        <div style={{ width: '98.7%', height: '100%', background: 'linear-gradient(90deg, #ffb74d, #f45d48)', borderRadius: '12px 0 0 12px', position: 'relative' }}>
                                             {/* Error Bar Removed */}
                                         </div>
                                     </div>
