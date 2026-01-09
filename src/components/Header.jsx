@@ -3,14 +3,16 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
+import { useLanguage } from '../context/LanguageContext';
 
-const Header = ({ lang, setLang }) => {
+const Header = () => {
+    const { lang, setLang } = useLanguage();
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const router = useRouter();
     const pathname = usePathname();
 
-    // Default to 'en' if not provided
+    // Default to 'en' if not provided (though context should provide it)
     const currentLang = lang || 'en';
 
     const languages = [

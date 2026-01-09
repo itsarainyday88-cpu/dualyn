@@ -9,14 +9,13 @@ export const metadata = {
 };
 
 export default function TechnologyPage() {
-    const lang = 'en';
     return (
         <div style={{ paddingTop: '80px' }}>
             <h1 className="sr-only">Technology</h1>
-            <CoreTech lang={lang} />
-            <LNPTech lang={lang} />
-            <DualSystem lang={lang} />
-            <Evidence lang={lang} />
+            <CoreTech />
+            <LNPTech />
+            <DualSystem />
+            <Evidence />
         </div>
     );
 }

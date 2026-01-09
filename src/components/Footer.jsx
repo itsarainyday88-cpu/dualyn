@@ -1,7 +1,9 @@
 "use client";
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
-const Footer = ({ lang }) => {
+const Footer = () => {
+    const { lang } = useLanguage();
     const content = {
         kr: { inquiry: '글로벌 파트너십 문의', btn: '공식 홈페이지 문의하기', brochure: '브로슈어' },
         en: { inquiry: 'Global Partnership Inquiry', btn: 'Contact via Official Website', brochure: 'Brochure' },

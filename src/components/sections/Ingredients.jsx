@@ -1,7 +1,10 @@
 "use client";
 import React from 'react';
+import { useLanguage } from '../../context/LanguageContext';
 
-const Ingredients = ({ lang }) => {
+const Ingredients = ({ lang: propLang }) => {
+    const { lang: contextLang } = useLanguage();
+    const lang = propLang || contextLang || 'en';
     const content = {
         kr: {
             title: "Technical Specification",

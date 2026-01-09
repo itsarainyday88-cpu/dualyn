@@ -6,11 +6,10 @@ export const metadata = {
 };
 
 export default function BrandStoryPage() {
-    const lang = 'en';
     return (
         <div style={{ paddingTop: '80px' }}>
             <h1 className="sr-only">Brand Story</h1>
-            <Philosophy lang={lang} />
+            <Philosophy />
         </div>
     );
 }

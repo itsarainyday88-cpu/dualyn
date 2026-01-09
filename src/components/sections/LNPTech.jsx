@@ -1,8 +1,11 @@
 "use client";
 import React from 'react';
 import { Shield, Activity, Zap } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
 
-const LNPTech = ({ lang }) => {
+const LNPTech = ({ lang: propLang }) => {
+    const { lang: contextLang } = useLanguage();
+    const lang = propLang || contextLang || 'en';
     const content = {
         kr: {
             title: "성분을 넘어, 전달의 혁신으로",

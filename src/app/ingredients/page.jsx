@@ -6,11 +6,10 @@ export const metadata = {
 };
 
 export default function IngredientsPage() {
-    const lang = 'en';
     return (
         <div style={{ paddingTop: '80px' }}>
             <h1 className="sr-only">Ingredients</h1>
-            <IngredientsSection lang={lang} />
+            <IngredientsSection />
         </div>
     );
 }

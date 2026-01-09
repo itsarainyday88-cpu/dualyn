@@ -1,4 +1,5 @@
 import './globals.css';
+import { LanguageProvider } from '../context/LanguageContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -26,7 +27,7 @@ export const metadata = {
     },
     verification: {
         other: {
-            'naver-site-verification': 'YOUR_VERIFICATION_CODE', // Placeholder, user needs to provide or I leave blank/comment
+            'naver-site-verification': 'YOUR_VERIFICATION_CODE',
         },
     },
 };
@@ -35,25 +36,14 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                {/* Since Header uses useState, we will need to wrap it or fix it to be a client component later. 
-             Ideally the layout itself remains server component. */}
-                <HeaderWrapper />
-                <main className="min-h-screen">
-                    {children}
-                </main>
-                <FooterWrapper />
+                <LanguageProvider>
+                    <Header />
+                    <main className="min-h-screen">
+                        {children}
+                    </main>
+                    <Footer />
+                </LanguageProvider>
             </body>
         </html>
     );
-}
-
-// Temporary wrappers to handle potential client-side requirements until components are fully migrated
-// Real implementation will import direct components, assuming they have "use client" if needed.
-// For now, let's implement a Client Component wrapper pattern if needed, but easier to just ensure Header/Footer map to client components.
-
-function HeaderWrapper() {
-    return <Header lang="en" />;
-}
-function FooterWrapper() {
-    return <Footer lang="en" />;
 }

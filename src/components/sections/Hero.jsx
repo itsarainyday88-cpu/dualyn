@@ -1,7 +1,10 @@
 "use client";
 import React, { useEffect, useState } from 'react';
+import { useLanguage } from '../../context/LanguageContext';
 
-const Hero = ({ lang }) => {
+const Hero = ({ lang: propLang }) => {
+    const { lang: contextLang } = useLanguage();
+    const lang = propLang || contextLang || 'en';
     const content = {
         kr: {
             subtitle: "The New Standard",

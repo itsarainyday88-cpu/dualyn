@@ -3,8 +3,11 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { Zap, Activity, Microscope } from 'lucide-react';
 import micropdrnImage from '../../assets/micropdrn_penetration.png';
+import { useLanguage } from '../../context/LanguageContext';
 
-const CoreTech = ({ lang }) => {
+const CoreTech = ({ lang: propLang }) => {
+    const { lang: contextLang } = useLanguage();
+    const lang = propLang || contextLang || 'en';
     const content = {
         kr: {
             subtitle: "Core Tech",
