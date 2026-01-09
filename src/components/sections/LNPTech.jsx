@@ -11,6 +11,7 @@ const LNPTech = ({ lang: propLang }) => {
             title: "성분을 넘어, 전달의 혁신으로",
             subtitle: "3rd GENERATION DELIVERY SYSTEM",
             desc: "리포좀의 한계를 넘어 각질층을 통과하는 3세대 LNP 기술이\n듀알린의 Dual-Layer 성분을 피부 기저층까지 정밀하게 배달합니다.",
+            visuals: { liposome: "Liposome", lnp: "LNP", gen2: "2nd Gen", gen3: "3rd Gen" },
             features: [
                 { title: "우수한 안정성", eng: "Superior Stability" },
                 { title: "높은 세포 흡수율", eng: "High Cell Uptake" },
@@ -21,6 +22,7 @@ const LNPTech = ({ lang: propLang }) => {
             title: "Beyond Ingredients,\nInnovation in Delivery",
             subtitle: "3rd GENERATION DELIVERY SYSTEM",
             desc: "Beyond the limitations of liposomes, 3rd generation LNP technology\nprecisely delivers DUALYN's Dual-Layer ingredients through the stratum corneum to the basal layer.",
+            visuals: { liposome: "Liposome", lnp: "LNP", gen2: "2nd Gen", gen3: "3rd Gen" },
             features: [
                 { title: "Superior Stability", eng: "Molecular Stability" },
                 { title: "High Cell Uptake", eng: "Enhanced Absorption" },
@@ -31,6 +33,7 @@ const LNPTech = ({ lang: propLang }) => {
             title: "超越成分，\n输送技术的创新",
             subtitle: "第三代输送系统",
             desc: "超越脂质体的局限，第三代LNP技术\n将DUALYN的双层成分精确输送穿过角质层到达基底层。",
+            visuals: { liposome: "脂质体", lnp: "LNP", gen2: "第二代", gen3: "第三代" },
             features: [
                 { title: "卓越稳定性", eng: "分子稳定性" },
                 { title: "高细胞摄取率", eng: "吸收增强" },
@@ -41,6 +44,7 @@ const LNPTech = ({ lang: propLang }) => {
             title: "เหนือกว่าส่วนผสม\nนวัตกรรมแห่งการส่งผ่าน",
             subtitle: "ระบบส่งผ่านรุ่นที่ 3",
             desc: "ก้าวข้ามขีดจำกัดของไลโปโซมด้วยเทคโนโลยี LNP รุ่นที่ 3\nส่งผ่านส่วนผสม Dual-Layer ของ DUALYN ผ่านชั้นผิวหนังกำพร้าสู่ชั้นฐานได้อย่างแม่นยำ",
+            visuals: { liposome: "Liposome", lnp: "LNP", gen2: "2nd Gen", gen3: "3rd Gen" },
             features: [
                 { title: "ความเสถียรที่เหนือกว่า", eng: "Molecular Stability" },
                 { title: "การดูดซึมเข้าเซลล์สูง", eng: "Enhanced Absorption" },
@@ -51,6 +55,7 @@ const LNPTech = ({ lang: propLang }) => {
             title: "ما وراء المكونات،\nابتكار في التوصيل",
             subtitle: "نظام توصيل الجيل الثالث",
             desc: "تجاوز حدود الليبوسومات، تقنية LNP من الجيل الثالث\nتوصل مكونات DUALYN مزدوجة الطبقة بدقة عبر الطبقة القرنية إلى الطبقة القاعدية.",
+            visuals: { liposome: "Liposome", lnp: "LNP", gen2: "2nd Gen", gen3: "3rd Gen" },
             features: [
                 { title: "ثبات فائق", eng: "Molecular Stability" },
                 { title: "امتصاص خلوي عالي", eng: "Enhanced Absorption" },
@@ -61,6 +66,7 @@ const LNPTech = ({ lang: propLang }) => {
             title: "Vượt qua Thành phần,\nĐổi mới trong Dẫn truyền",
             subtitle: "HỆ THỐNG DẪN TRUYỀN THẾ HỆ 3",
             desc: "Vượt qua giới hạn của liposome, công nghệ LNP thế hệ thứ 3\ndẫn truyền chính xác các thành phần Dual-Layer của DUALYN qua lớp sừng đến lớp đáy.",
+            visuals: { liposome: "Liposome", lnp: "LNP", gen2: "2nd Gen", gen3: "3rd Gen" },
             features: [
                 { title: "Độ ổn định vượt trội", eng: "Molecular Stability" },
                 { title: "Hấp thụ tế bào cao", eng: "Enhanced Absorption" },
@@ -71,6 +77,7 @@ const LNPTech = ({ lang: propLang }) => {
             title: "成分を超えて、\nデリバリーの革新へ",
             subtitle: "第3世代デリバリーシステム",
             desc: "リポソームの限界を超え、第3世代LNP技術が\nDUALYNのDual-Layer成分を角質層を通過して基底層まで正確に届けます。",
+            visuals: { liposome: "Liposome", lnp: "LNP", gen2: "2nd Gen", gen3: "3rd Gen" },
             features: [
                 { title: "優れた安定性", eng: "Molecular Stability" },
                 { title: "高い細胞吸収率", eng: "Enhanced Absorption" },
@@ -149,9 +156,9 @@ const LNPTech = ({ lang: propLang }) => {
                                         borderRadius: '50%', border: '4px dashed #999',
                                         display: 'flex', alignItems: 'center', justifyContent: 'center'
                                     }}>
-                                        <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Liposome</span>
+                                        <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{text.visuals.liposome}</span>
                                     </div>
-                                    <p style={{ marginTop: '15px' }}>2nd Gen</p>
+                                    <p style={{ marginTop: '15px' }}>{text.visuals.gen2}</p>
                                 </div>
 
                                 {/* Arrow */}
@@ -167,9 +174,9 @@ const LNPTech = ({ lang: propLang }) => {
                                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                                         color: 'white'
                                     }}>
-                                        <span style={{ fontSize: '2rem', fontWeight: '800' }}>LNP</span>
+                                        <span style={{ fontSize: '2rem', fontWeight: '800' }}>{text.visuals.lnp}</span>
                                     </div>
-                                    <p style={{ marginTop: '15px', fontWeight: 'bold', color: 'var(--color-burgundy)' }}>3rd Gen</p>
+                                    <p style={{ marginTop: '15px', fontWeight: 'bold', color: 'var(--color-burgundy)' }}>{text.visuals.gen3}</p>
                                 </div>
                             </div>
                         </div>

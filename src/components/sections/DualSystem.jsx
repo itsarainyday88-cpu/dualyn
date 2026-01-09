@@ -9,6 +9,7 @@ const DualSystem = ({ lang: propLang }) => {
         kr: {
             subtitle: "Dual System",
             title: "Immediate & Lasting",
+            tag: "FULL FACE PROTOCOL",
             items: [
                 { title: "microPDRN", desc: "초기 세포 반응 유도" },
                 { title: "PN", desc: "장기적인 조직 개선 및 탄력 유지" },
@@ -19,6 +20,7 @@ const DualSystem = ({ lang: propLang }) => {
         en: {
             subtitle: "Dual System",
             title: "Immediate & Lasting",
+            tag: "FULL FACE PROTOCOL",
             items: [
                 { title: "microPDRN", desc: "Induces initial cellular response" },
                 { title: "PN", desc: "Long-term tissue improvement" },
@@ -29,6 +31,7 @@ const DualSystem = ({ lang: propLang }) => {
         cn: {
             subtitle: "双重系统",
             title: "即效 & 持久",
+            tag: "全脸方案",
             items: [
                 { title: "microPDRN", desc: "诱导初期细胞反应" },
                 { title: "PN", desc: "长期组织改善" },
@@ -39,6 +42,7 @@ const DualSystem = ({ lang: propLang }) => {
         th: {
             subtitle: "ระบบคู่ขนาน",
             title: "เห็นผลทันที & ยั่งยืน",
+            tag: "FULL FACE PROTOCOL",
             items: [
                 { title: "microPDRN", desc: "กระตุ้นการตอบสนองของเซลล์ในระยะแรก" },
                 { title: "PN", desc: "ปรับปรุงเนื้อเยื่อและคงความยืดหยุ่นในระยะยาว" },
@@ -49,6 +53,7 @@ const DualSystem = ({ lang: propLang }) => {
         ar: {
             subtitle: "نظام مزدوج",
             title: "فوري ودائم",
+            tag: "FULL FACE PROTOCOL",
             items: [
                 { title: "microPDRN", desc: "يحفز الاستجابة الخلوية الأولية" },
                 { title: "PN", desc: "تحسين الأنسجة على المدى الطويل" },
@@ -59,6 +64,7 @@ const DualSystem = ({ lang: propLang }) => {
         vn: {
             subtitle: "Hệ thống Kép",
             title: "Tức thì & Lâu dài",
+            tag: "FULL FACE PROTOCOL",
             items: [
                 { title: "microPDRN", desc: "Kích thích phản ứng tế bào ban đầu" },
                 { title: "PN", desc: "Cải thiện mô lâu dài" },
@@ -69,6 +75,7 @@ const DualSystem = ({ lang: propLang }) => {
         jp: {
             subtitle: "デュアルシステム",
             title: "即効性と持続性",
+            tag: "FULL FACE PROTOCOL",
             items: [
                 { title: "microPDRN", desc: "初期細胞反応を誘導" },
                 { title: "PN", desc: "長期的な組織改善と弾力維持" },
@@ -89,7 +96,7 @@ const DualSystem = ({ lang: propLang }) => {
                         padding: '6px 16px', fontWeight: '700', fontSize: '0.8rem',
                         marginBottom: '20px', display: 'inline-block'
                     }}>
-                        FULL FACE PROTOCOL
+                        {text.tag}
                     </span>
                     <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', color: 'var(--color-burgundy)', marginBottom: '10px' }}>{text.title}</h2>
                     <p style={{ fontSize: '1.2rem', color: '#666', maxWidth: '600px', margin: '0 auto' }}>{text.desc}</p>

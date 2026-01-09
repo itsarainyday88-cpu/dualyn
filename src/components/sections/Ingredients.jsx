@@ -9,6 +9,11 @@ const Ingredients = ({ lang: propLang }) => {
         kr: {
             title: "Technical Specification",
             subtitle: "FORMULATION DATA",
+            ref: "REF. DUALYN-2026-V1",
+            grade: "CERTIFIED GRADE",
+            disclaimer: "* All measurements are subject to standard lab tolerance.",
+            formula: "DUALYN™ ORIGINAL FORMULA",
+            tag: "SPEC",
             specs: [
                 { label: "miPDRN Complex", value: "5 mg/mL", sub: "0.50% microPDRN" },
                 { label: "Sodium Hyaluronate (High)", value: "1.80 %", sub: "18mg/mL High Molecular" },
@@ -20,6 +25,11 @@ const Ingredients = ({ lang: propLang }) => {
         en: {
             title: "Technical Specification",
             subtitle: "FORMULATION DATA",
+            ref: "REF. DUALYN-2026-V1",
+            grade: "CERTIFIED GRADE",
+            disclaimer: "* All measurements are subject to standard lab tolerance.",
+            formula: "DUALYN™ ORIGINAL FORMULA",
+            tag: "SPEC",
             specs: [
                 { label: "miPDRN Complex", value: "5 mg/mL", sub: "0.50% microPDRN" },
                 { label: "Sodium Hyaluronate (High)", value: "1.80 %", sub: "18mg/mL High Molecular" },
@@ -31,6 +41,11 @@ const Ingredients = ({ lang: propLang }) => {
         cn: {
             title: "技术规格",
             subtitle: "配方数据",
+            ref: "参考标准 DUALYN-2026-V1",
+            grade: "认证等级",
+            disclaimer: "* 所有测量值均在标准实验室误差范围内。",
+            formula: "DUALYN™ 原始配方",
+            tag: "规格",
             specs: [
                 { label: "miPDRN 复合物", value: "5 mg/mL", sub: "0.50% microPDRN" },
                 { label: "透明质酸钠 (高分子)", value: "1.80 %", sub: "18mg/mL 高分子量" },
@@ -42,6 +57,11 @@ const Ingredients = ({ lang: propLang }) => {
         th: {
             title: "ข้อมูลจำเพาะทางเทคนิค",
             subtitle: "ข้อมูลสูตร",
+            ref: "REF. DUALYN-2026-V1",
+            grade: "CERTIFIED GRADE",
+            disclaimer: "* All measurements are subject to standard lab tolerance.",
+            formula: "DUALYN™ ORIGINAL FORMULA",
+            tag: "SPEC",
             specs: [
                 { label: "miPDRN Complex", value: "5 mg/mL", sub: "0.50% microPDRN" },
                 { label: "Sodium Hyaluronate (High)", value: "1.80 %", sub: "18mg/mL โมเลกุลสูง" },
@@ -53,6 +73,11 @@ const Ingredients = ({ lang: propLang }) => {
         ar: {
             title: "المواصفات الفنية",
             subtitle: "بيانات التركيبة",
+            ref: "REF. DUALYN-2026-V1",
+            grade: "CERTIFIED GRADE",
+            disclaimer: "* All measurements are subject to standard lab tolerance.",
+            formula: "DUALYN™ ORIGINAL FORMULA",
+            tag: "SPEC",
             specs: [
                 { label: "miPDRN Complex", value: "5 mg/mL", sub: "0.50% microPDRN" },
                 { label: "Sodium Hyaluronate (High)", value: "1.80 %", sub: "18 ملغ/مل جزيئي عالي" },
@@ -64,6 +89,11 @@ const Ingredients = ({ lang: propLang }) => {
         vn: {
             title: "Thông số Kỹ thuật",
             subtitle: "DỮ LIỆU CÔNG THỨC",
+            ref: "REF. DUALYN-2026-V1",
+            grade: "CERTIFIED GRADE",
+            disclaimer: "* All measurements are subject to standard lab tolerance.",
+            formula: "DUALYN™ ORIGINAL FORMULA",
+            tag: "SPEC",
             specs: [
                 { label: "miPDRN Complex", value: "5 mg/mL", sub: "0.50% microPDRN" },
                 { label: "Sodium Hyaluronate (High)", value: "1.80 %", sub: "18mg/mL Phân tử Cao" },
@@ -75,6 +105,11 @@ const Ingredients = ({ lang: propLang }) => {
         jp: {
             title: "技術仕様",
             subtitle: "処方データ",
+            ref: "REF. DUALYN-2026-V1",
+            grade: "CERTIFIED GRADE",
+            disclaimer: "* All measurements are subject to standard lab tolerance.",
+            formula: "DUALYN™ ORIGINAL FORMULA",
+            tag: "SPEC",
             specs: [
                 { label: "miPDRN Complex", value: "5 mg/mL", sub: "0.50% microPDRN" },
                 { label: "Sodium Hyaluronate (High)", value: "1.80 %", sub: "18mg/mL 高分子" },
@@ -98,8 +133,8 @@ const Ingredients = ({ lang: propLang }) => {
                         <h2 style={{ fontSize: '3rem', fontFamily: 'var(--font-serif)', marginTop: '10px', lineHeight: '1', color: '#1A1A1A' }}>{text.title}</h2>
                     </div>
                     <div style={{ textAlign: 'right', opacity: 0.6, fontSize: '0.8rem', fontFamily: 'monospace', color: '#1A1A1A' }}>
-                        REF. DUALYN-2026-V1<br />
-                        CERTIFIED GRADE
+                        {text.ref}<br />
+                        {text.grade}
                     </div>
                 </div>
 
@@ -111,14 +146,14 @@ const Ingredients = ({ lang: propLang }) => {
                     width: '100%'
                 }}>
                     {text.specs.map((item, index) => (
-                        <SpecCard key={index} item={item} />
+                        <SpecCard key={index} item={item} tagLabel={text.tag} />
                     ))}
                 </div>
 
                 {/* Footer Note */}
                 <div style={{ marginTop: '60px', paddingTop: '20px', borderTop: '0.5px solid rgba(255,255,255,0.1)', display: 'flex', justifyContent: 'space-between', opacity: 0.5, fontSize: '0.8rem' }}>
-                    <span>* All measurements are subject to standard lab tolerance.</span>
-                    <span>DUALYN™ ORIGINAL FORMULA</span>
+                    <span>{text.disclaimer}</span>
+                    <span>{text.formula}</span>
                 </div>
 
             </div>
@@ -126,7 +161,7 @@ const Ingredients = ({ lang: propLang }) => {
     );
 };
 
-const SpecCard = ({ item }) => {
+const SpecCard = ({ item, tagLabel }) => {
     // Default to displaying ppm (true)
     const [isPpm, setIsPpm] = React.useState(true);
 
@@ -186,7 +221,7 @@ const SpecCard = ({ item }) => {
                     fontWeight: '700',
                     borderRadius: '9999px',
                     whiteSpace: 'nowrap'
-                }}>SPEC</span>
+                }}>{tagLabel}</span>
             </div>
 
             <div style={{ textAlign: 'right', marginTop: 'auto' }}>

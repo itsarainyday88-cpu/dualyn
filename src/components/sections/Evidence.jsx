@@ -10,43 +10,50 @@ const Evidence = ({ lang: propLang }) => {
             subtitle: "Evidence",
             title: "Proven Results",
             desc: "HA+PN 병용 시너지를 통한 가속화되는 조직 회복.",
-            chart: "세포 이동 속도 비교 (Wound Healing Assay)"
+            chart: "세포 이동 속도 비교 (Wound Healing Assay)",
+            labels: { control: "Control", test: "microPDRN + HA" }
         },
         en: {
             subtitle: "Evidence",
             title: "Proven Results",
             desc: "In-vitro tests confirmed a significant increase in cell migration rate using microPDRN compared to the control group.",
-            chart: "Cell Migration Rate Comparison"
+            chart: "Cell Migration Rate Comparison",
+            labels: { control: "Control", test: "microPDRN + HA" }
         },
         cn: {
             subtitle: "实证",
             title: "验证结果",
             desc: "体外测试证实，与对照组相比，使用 microPDRN 的细胞迁移率显著增加。",
-            chart: "细胞迁移率比较"
+            chart: "细胞迁移率比较",
+            labels: { control: "对照组", test: "microPDRN + HA" }
         },
         th: {
             subtitle: "หลักฐาน",
             title: "ผลลัพธ์ที่พิสูจน์แล้ว",
             desc: "เร่งการฟื้นฟูเนื้อเยื่อผ่านการทำงานร่วมกันของ HA+PN",
-            chart: "เปรียบเทียบอัตราการเคลื่อนที่ของเซลล์ (Wound Healing Assay)"
+            chart: "เปรียบเทียบอัตราการเคลื่อนที่ของเซลล์ (Wound Healing Assay)",
+            labels: { control: "Control", test: "microPDRN + HA" }
         },
         ar: {
             subtitle: "الأدلة",
             title: "نتائج مثبتة",
             desc: "تسريع استعادة الأنسجة من خلال تآزر HA+PN.",
-            chart: "مقارنة معدل هجرة الخلايا (Wound Healing Assay)"
+            chart: "مقارنة معدل هجرة الخلايا (Wound Healing Assay)",
+            labels: { control: "Control", test: "microPDRN + HA" }
         },
         vn: {
             subtitle: "Bằng chứng",
             title: "Kết quả Đã được Chứng minh",
             desc: "Tăng tốc phục hồi mô thông qua sự hiệp đồng của HA+PN.",
-            chart: "So sánh Tốc độ Di chuyển Tế bào (Thử nghiệm Chữa lành Vết thương)"
+            chart: "So sánh Tốc độ Di chuyển Tế bào (Thử nghiệm Chữa lành Vết thương)",
+            labels: { control: "Control", test: "microPDRN + HA" }
         },
         jp: {
             subtitle: "エビデンス",
             title: "実証された効果",
             desc: "HA+PNの相乗効果による組織回復の加速。",
-            chart: "細胞移動速度の比較 (創傷治癒アッセイ)"
+            chart: "細胞移動速度の比較 (創傷治癒アッセイ)",
+            labels: { control: "Control", test: "microPDRN + HA" }
         }
     };
 
@@ -73,7 +80,7 @@ const Evidence = ({ lang: propLang }) => {
                                 {/* Control Group */}
                                 <div>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '1rem', color: '#666' }}>
-                                        <span>Control</span>
+                                        <span>{text.labels.control}</span>
                                         <span style={{ fontSize: '1rem', fontWeight: '700' }}>42.5% ± 3.2</span>
                                     </div>
                                     <div style={{ width: '100%', background: '#eee', height: '24px', borderRadius: '12px', position: 'relative', overflow: 'visible' }}>
@@ -86,7 +93,7 @@ const Evidence = ({ lang: propLang }) => {
                                 {/* Test Group */}
                                 <div>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '1.1rem', color: 'var(--color-burgundy)', fontWeight: '700' }}>
-                                        <span>microPDRN + HA</span>
+                                        <span>{text.labels.test}</span>
                                         <span style={{ fontSize: '1.2rem', fontWeight: '700' }}>98.7% ± 1.5</span>
                                     </div>
                                     <div style={{ width: '100%', background: '#eee', height: '24px', borderRadius: '12px', position: 'relative', overflow: 'visible' }}>
