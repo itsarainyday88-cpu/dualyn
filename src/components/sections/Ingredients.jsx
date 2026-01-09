@@ -132,14 +132,14 @@ const SpecCard = ({ item }) => {
     return (
         <div className="spec-card" style={{
             background: 'white',
-            padding: '20px', /* Minimal padding */
-            borderRadius: '20px', /* Soft commercial curve - Reduced */
+            padding: '16px', /* Minimal padding - Reduced further */
+            borderRadius: '16px', /* Soft commercial curve - Reduced further */
             boxShadow: '0 10px 30px rgba(0,0,0,0.03)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
             height: '100%',
-            minHeight: '180px', /* Uniform pricing - Reduced from 200px */
+            minHeight: '140px', /* Uniform pricing - Significantly Reduced */
             transition: 'transform 0.3s ease',
             border: '1px solid rgba(0,0,0,0.03)',
             cursor: isPercentage ? 'pointer' : 'default',
@@ -155,17 +155,17 @@ const SpecCard = ({ item }) => {
                 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.03)';
             }}
         >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px' }}>
                 <h4 style={{
-                    fontSize: '1.0rem', /* Reduced from 1.1rem */
+                    fontSize: '0.9rem', /* Reduced from 1.0rem */
                     fontWeight: '700',
                     color: '#2c2c2c',
                     fontFamily: 'var(--font-body)',
                     maxWidth: '80%'
                 }}>{item.label}</h4>
                 <span className="pill-tag" style={{
-                    fontSize: '0.7rem', /* Reduced from 0.75rem */
-                    padding: '3px 10px', /* Reduced padding */
+                    fontSize: '0.65rem', /* Reduced */
+                    padding: '2px 8px', /* Reduced padding */
                     background: '#f2d5d7',
                     color: 'var(--color-burgundy)',
                     fontWeight: '700',
@@ -178,7 +178,7 @@ const SpecCard = ({ item }) => {
                 <span style={{
                     display: 'block',
                     fontFamily: 'var(--font-body)', /* Ensure Pretendard/Sans for modern look */
-                    fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', /* Responsive sizing - Reduced */
+                    fontSize: 'clamp(1.4rem, 2.5vw, 1.8rem)', /* Significantly Reduced from 1.6/3.5/2.2 */
                     fontWeight: '800',
                     color: 'var(--color-burgundy)',
                     lineHeight: '1',
@@ -191,7 +191,7 @@ const SpecCard = ({ item }) => {
                     {displayValue}
                 </span>
                 <span style={{
-                    fontSize: '0.85rem', /* Reduced from 0.9rem */
+                    fontSize: '0.8rem', /* Reduced from 0.85rem */
                     color: '#666',
                     fontWeight: '500',
                     marginTop: '4px',
