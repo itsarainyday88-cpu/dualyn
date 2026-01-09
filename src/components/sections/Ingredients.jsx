@@ -133,13 +133,13 @@ const SpecCard = ({ item }) => {
         <div className="spec-card" style={{
             background: 'white',
             padding: '20px', /* Minimal padding */
-            borderRadius: '24px', /* Soft commercial curve */
+            borderRadius: '20px', /* Soft commercial curve - Reduced */
             boxShadow: '0 10px 30px rgba(0,0,0,0.03)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
             height: '100%',
-            minHeight: '200px', /* Uniform pricing */
+            minHeight: '180px', /* Uniform pricing - Reduced from 200px */
             transition: 'transform 0.3s ease',
             border: '1px solid rgba(0,0,0,0.03)',
             cursor: isPercentage ? 'pointer' : 'default',
@@ -155,17 +155,17 @@ const SpecCard = ({ item }) => {
                 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.03)';
             }}
         >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
                 <h4 style={{
-                    fontSize: '1.1rem',
+                    fontSize: '1.0rem', /* Reduced from 1.1rem */
                     fontWeight: '700',
                     color: '#2c2c2c',
                     fontFamily: 'var(--font-body)',
                     maxWidth: '80%'
                 }}>{item.label}</h4>
                 <span className="pill-tag" style={{
-                    fontSize: '0.75rem',
-                    padding: '4px 12px',
+                    fontSize: '0.7rem', /* Reduced from 0.75rem */
+                    padding: '3px 10px', /* Reduced padding */
                     background: '#f2d5d7',
                     color: 'var(--color-burgundy)',
                     fontWeight: '700',
@@ -178,7 +178,7 @@ const SpecCard = ({ item }) => {
                 <span style={{
                     display: 'block',
                     fontFamily: 'var(--font-body)', /* Ensure Pretendard/Sans for modern look */
-                    fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', /* Responsive sizing - Reduced */
+                    fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', /* Responsive sizing - Reduced */
                     fontWeight: '800',
                     color: 'var(--color-burgundy)',
                     lineHeight: '1',
@@ -191,10 +191,10 @@ const SpecCard = ({ item }) => {
                     {displayValue}
                 </span>
                 <span style={{
-                    fontSize: '0.9rem',
+                    fontSize: '0.85rem', /* Reduced from 0.9rem */
                     color: '#666',
                     fontWeight: '500',
-                    marginTop: '5px',
+                    marginTop: '4px',
                     display: 'block'
                 }}>{item.sub}</span>
             </div>
