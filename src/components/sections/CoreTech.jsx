@@ -1,4 +1,6 @@
+"use client";
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Zap, Activity, Microscope } from 'lucide-react';
 import micropdrnImage from '../../assets/micropdrn_penetration.png';
 
@@ -76,14 +78,14 @@ const CoreTech = ({ lang }) => {
     const [activeFeature, setActiveFeature] = useState(null);
 
     return (
-        <section className="section bg-light-rose" style={{ overflow: 'hidden' }}>
+        <section className="section bg-light-rose" style={{ overflow: 'hidden', padding: '120px 0' }}>
             <div className="container">
 
                 {/* Header Area */}
                 {/* Header Area */}
-                <div className="text-center" style={{ marginBottom: '50px' }}> {/* Reduced from 80px */}
+                <div className="text-center" style={{ marginBottom: '50px', textAlign: 'center' }}> {/* Reduced from 80px */}
                     <span style={{ color: 'var(--color-burgundy)', letterSpacing: '3px', fontWeight: '700', fontSize: '1rem', textTransform: 'uppercase' }}>{text.subtitle}</span>
-                    <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginTop: '10px', marginBottom: '30px', fontFamily: 'var(--font-serif)', color: 'var(--color-burgundy)', lineHeight: '1' }}>{text.headline}</h2> {/* Increased size to 5rem, reduced margins */}
+                    <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginTop: '10px', marginBottom: '30px', fontFamily: 'var(--font-serif)', color: 'var(--color-burgundy)', lineHeight: '1', textAlign: 'center' }}>{text.headline}</h2> {/* Increased size to 5rem, reduced margins */}
 
                     {/* Refined Philosophy Statement */}
                     <div style={{ position: 'relative', padding: '20px 0' }}> {/* Reduced padding from 40px */}
@@ -95,7 +97,8 @@ const CoreTech = ({ lang }) => {
                             fontStyle: 'italic',
                             whiteSpace: 'pre-line',
                             fontWeight: '400',
-                            color: '#2c2c2c'
+                            color: '#2c2c2c',
+                            textAlign: 'center'
                         }}>
                             {text.keyMessage}
                         </h3>
@@ -120,11 +123,14 @@ const CoreTech = ({ lang }) => {
                         border: '1px solid rgba(255, 255, 255, 0.1)',
                         position: 'relative'
                     }}>
-                        <img
+
+
+                        <Image
                             src={micropdrnImage}
                             alt="Conventional PDRN vs microPDRN Penetration Comparison"
                             style={{
                                 width: '100%',
+                                height: 'auto',
                                 display: 'block',
                                 objectFit: 'cover'
                             }}

@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 
 const DualSystem = ({ lang }) => {
@@ -9,7 +10,7 @@ const DualSystem = ({ lang }) => {
                 { title: "microPDRN", desc: "초기 세포 반응 유도" },
                 { title: "PN", desc: "장기적인 조직 개선 및 탄력 유지" },
                 { title: "Multi-HA", desc: "즉각적 수분 공급 + 지속적 보습" },
-                { title: "Vitamin B12", desc: "세포 에너지 대사 활성화", highlight: true }
+                { title: "Vitamin B12", desc: "세포 에너지 대사 활성화" }
             ]
         },
         en: {
@@ -67,7 +68,7 @@ const DualSystem = ({ lang }) => {
     const text = content[lang];
 
     return (
-        <section className="section bg-white"> {/* Alternating: White */}
+        <section className="section bg-white" style={{ paddingBottom: '108px' }}> {/* Alternating: White */}
             <div className="container">
                 <div className="text-center" style={{ marginBottom: '60px' }}>
                     <span className="pill-tag" style={{
@@ -88,10 +89,10 @@ const DualSystem = ({ lang }) => {
                             padding: '40px 20px',
                             borderRadius: '16px',
                             boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-                            borderTop: item.highlight ? '4px solid var(--color-orange)' : '4px solid var(--color-burgundy)',
+                            borderTop: '4px solid var(--color-burgundy)',
                             textAlign: 'center'
                         }}>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '16px', color: item.highlight ? 'var(--color-orange)' : 'var(--color-burgundy)' }}>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '16px', color: 'var(--color-burgundy)' }}>
                                 {item.title}
                             </h3>
                             <p style={{ color: 'var(--color-text)', opacity: 0.8 }}>{item.desc}</p>

@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 
 const Evidence = ({ lang }) => {
@@ -43,23 +44,55 @@ const Evidence = ({ lang }) => {
     const text = content[lang];
 
     return (
-        <section className="section bg-light-rose"> {/* Alternating: Light Rose */}
+        <section className="section bg-light-rose" style={{ padding: '98px 0' }}> {/* Alternating: Light Rose */}
             <div className="container">
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '40px', justifyContent: 'center' }}>
                     <div style={{ flex: '1 1 300px' }}>
-                        <span style={{ color: 'var(--color-burgundy)', fontWeight: '600' }}>{text.subtitle}</span>
+                        <span style={{ color: 'var(--color-burgundy)', fontWeight: '600', fontSize: '1.2rem' }}>{text.subtitle}</span>
                         <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 3rem)', marginBottom: '20px' }}>{text.title}</h2>
-                        <p style={{ fontSize: '1.2rem', marginBottom: '40px' }}>{text.desc}</p>
+                        <p style={{ fontSize: '1.45rem', marginBottom: '40px' }}>{text.desc}</p>
 
-                        <div style={{ marginTop: '40px' }}>
-                            <h4 style={{ marginBottom: '10px' }}>{text.chart}</h4>
-                            {/* Placeholder Chart/Graph */}
-                            <div style={{ width: '100%', height: '20px', background: '#eee', borderRadius: '10px', marginBottom: '10px', overflow: 'hidden' }}>
-                                <div style={{ width: '90%', height: '100%', background: 'linear-gradient(90deg, var(--color-burgundy), var(--color-orange))' }}></div>
-                            </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.9rem', color: '#666' }}>
-                                <span>Control</span>
-                                <span><b>microPDRN + HA</b></span>
+                        <div style={{ marginTop: '50px' }}>
+                            <h4 style={{ marginBottom: '25px', fontSize: '1.2rem', fontWeight: '700', color: '#333' }}>
+                                {text.chart}
+                                <span style={{ display: 'block', marginTop: '4px', fontSize: '0.8em', fontWeight: '400', color: '#666' }}>(Gap Closure Rate at 24h)</span>
+                            </h4>
+
+                            {/* Chart Container */}
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+
+                                {/* Control Group */}
+                                <div>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '1rem', color: '#666' }}>
+                                        <span>Control</span>
+                                        <span style={{ fontSize: '1rem', fontWeight: '700' }}>42.5% ± 3.2</span>
+                                    </div>
+                                    <div style={{ width: '100%', background: '#eee', height: '24px', borderRadius: '12px', position: 'relative', overflow: 'visible' }}>
+                                        <div style={{ width: '42.5%', height: '100%', background: '#999', borderRadius: '12px 0 0 12px', position: 'relative' }}>
+                                            {/* Error Bar: Line */}
+                                            <div style={{ position: 'absolute', right: '-15px', top: '50%', marginTop: '-1px', width: '15px', height: '2px', background: '#666' }}></div>
+                                            {/* Error Bar: Cap */}
+                                            <div style={{ position: 'absolute', right: '-15px', top: '50%', marginTop: '-6px', width: '2px', height: '12px', background: '#666' }}></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Test Group */}
+                                <div>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '1.1rem', color: 'var(--color-burgundy)', fontWeight: '700' }}>
+                                        <span>microPDRN + HA</span>
+                                        <span style={{ fontSize: '1.2rem', fontWeight: '700' }}>98.7% ± 1.5</span>
+                                    </div>
+                                    <div style={{ width: '100%', background: '#eee', height: '24px', borderRadius: '12px', position: 'relative', overflow: 'visible' }}>
+                                        <div style={{ width: '98.7%', height: '100%', background: 'linear-gradient(90deg, var(--color-burgundy), var(--color-orange))', borderRadius: '12px 0 0 12px', position: 'relative' }}>
+                                            {/* Error Bar: Line */}
+                                            <div style={{ position: 'absolute', right: '-10px', top: '50%', marginTop: '-1px', width: '10px', height: '2px', background: '#333' }}></div>
+                                            {/* Error Bar: Cap */}
+                                            <div style={{ position: 'absolute', right: '-10px', top: '50%', marginTop: '-6px', width: '2px', height: '12px', background: '#333' }}></div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -67,7 +100,7 @@ const Evidence = ({ lang }) => {
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: '1 1 300px' }}>
                         <div style={{
                             width: '100%',
-                            maxWidth: '350px',
+                            maxWidth: '500px',
                             height: 'auto',
                             aspectRatio: '1 / 1',
                             borderRadius: '50%',

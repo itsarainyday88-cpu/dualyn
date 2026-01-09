@@ -1,0 +1,37 @@
+{
+  "pages": {
+    "/_app": [
+      "static/chunks/f9b14_next_dist_compiled_bed996bf._.js",
+      "static/chunks/f9b14_next_dist_shared_lib_fff639e0._.js",
+      "static/chunks/f9b14_next_dist_client_2c7db69b._.js",
+      "static/chunks/f9b14_next_dist_6aa3ed12._.js",
+      "static/chunks/f9b14_next_app_c77e5d9d.js",
+      "static/chunks/[next]_entry_page-loader_ts_5140c966._.js",
+      "static/chunks/f9b14_react-dom_bf13825d._.js",
+      "static/chunks/f9b14_45823261._.js",
+      "static/chunks/[root-of-the-server]__c5f671fe._.js",
+      "static/chunks/dualyn-app_src_pages__app_2da965e7._.js",
+      "static/chunks/turbopack-dualyn-app_src_pages__app_972489e5._.js"
+    ],
+    "/_error": [
+      "static/chunks/f9b14_next_dist_compiled_bed996bf._.js",
+      "static/chunks/f9b14_next_dist_shared_lib_b4af6c42._.js",
+      "static/chunks/f9b14_next_dist_client_2c7db69b._.js",
+      "static/chunks/f9b14_next_dist_f9970fc6._.js",
+      "static/chunks/f9b14_next_error_65452ec1.js",
+      "static/chunks/[next]_entry_page-loader_ts_58b2b520._.js",
+      "static/chunks/f9b14_react-dom_bf13825d._.js",
+      "static/chunks/f9b14_45823261._.js",
+      "static/chunks/[root-of-the-server]__005d694b._.js",
+      "static/chunks/dualyn-app_src_pages__error_2da965e7._.js",
+      "static/chunks/turbopack-dualyn-app_src_pages__error_8216c1b9._.js"
+    ]
+  },
+  "devFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [
+    "static/development/_ssgManifest.js",
+    "static/development/_buildManifest.js"
+  ],
+  "rootMainFiles": []
+}

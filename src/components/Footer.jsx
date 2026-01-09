@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 
 const Footer = ({ lang }) => {
@@ -48,7 +49,7 @@ const Footer = ({ lang }) => {
                     </a>
 
                     {/* Brochure Download Button */}
-                    <a href="/DUALYN.pdf" download
+                    <a href="/DUALYN.pdf" download="DUALYN.pdf" target="_blank" rel="noopener noreferrer"
                         style={{
                             display: 'inline-block',
                             padding: '16px 40px',

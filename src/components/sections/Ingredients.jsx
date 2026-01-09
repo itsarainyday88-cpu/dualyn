@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 
 const Ingredients = ({ lang }) => {
@@ -73,7 +74,7 @@ const Ingredients = ({ lang }) => {
     const text = content[lang];
 
     return (
-        <section className="section bg-white" style={{ color: '#1A1A1A' }}> {/* Alternating: White */}
+        <section className="section bg-white" style={{ color: '#1A1A1A', padding: '100px 0' }}> {/* Alternating: White */}
             <div className="container" style={{ maxWidth: '1000px' }}>
 
                 {/* Header */}
@@ -91,8 +92,8 @@ const Ingredients = ({ lang }) => {
                 {/* Spec Grid - CDL Style White Cards */}
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', /* Optimized for mobile */
-                    gap: '20px',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', /* Optimized for mobile */
+                    gap: '60px',
                     width: '100%'
                 }}>
                     {text.specs.map((item, index) => (
@@ -131,13 +132,14 @@ const SpecCard = ({ item }) => {
     return (
         <div className="spec-card" style={{
             background: 'white',
-            padding: '30px',
+            padding: '20px', /* Minimal padding */
             borderRadius: '24px', /* Soft commercial curve */
             boxShadow: '0 10px 30px rgba(0,0,0,0.03)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
             height: '100%',
+            minHeight: '200px', /* Uniform pricing */
             transition: 'transform 0.3s ease',
             border: '1px solid rgba(0,0,0,0.03)',
             cursor: isPercentage ? 'pointer' : 'default',
@@ -155,11 +157,11 @@ const SpecCard = ({ item }) => {
         >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
                 <h4 style={{
-                    fontSize: '1.25rem',
+                    fontSize: '1.1rem',
                     fontWeight: '700',
                     color: '#2c2c2c',
                     fontFamily: 'var(--font-body)',
-                    maxWidth: '70%'
+                    maxWidth: '80%'
                 }}>{item.label}</h4>
                 <span className="pill-tag" style={{
                     fontSize: '0.75rem',
@@ -176,7 +178,7 @@ const SpecCard = ({ item }) => {
                 <span style={{
                     display: 'block',
                     fontFamily: 'var(--font-body)', /* Ensure Pretendard/Sans for modern look */
-                    fontSize: '3rem', /* Massive Impact */
+                    fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', /* Responsive sizing - Reduced */
                     fontWeight: '800',
                     color: 'var(--color-burgundy)',
                     lineHeight: '1',

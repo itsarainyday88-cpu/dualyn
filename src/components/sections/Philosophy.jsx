@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 
 const Philosophy = ({ lang }) => {
@@ -37,7 +38,7 @@ const Philosophy = ({ lang }) => {
     const text = content[lang];
 
     return (
-        <section className="section bg-white" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <section className="section bg-white" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '120px 0' }}>
             <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                 <div>
                     <img src="/assets/philosophy_bg.png" alt="Micro Structure" style={{ width: '100%', maxWidth: '500px', borderRadius: '20px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />

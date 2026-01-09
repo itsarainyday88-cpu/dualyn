@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { Shield, Activity, Zap } from 'lucide-react';
 

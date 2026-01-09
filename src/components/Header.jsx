@@ -1,12 +1,17 @@
+"use client";
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 
 const Header = ({ lang, setLang }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const navigate = useNavigate();
-    const location = useLocation();
+    const router = useRouter();
+    const pathname = usePathname();
+
+    // Default to 'en' if not provided
+    const currentLang = lang || 'en';
 
     const languages = [
         { code: 'en', label: 'EN' },
@@ -33,26 +38,33 @@ const Header = ({ lang, setLang }) => {
     };
 
     const handleNavigation = (path) => {
-        navigate(path);
+        router.push(path);
         setIsMenuOpen(false);
         document.body.style.overflow = 'unset';
     };
 
+    const handleLangChange = (code) => {
+        if (setLang) {
+            setLang(code);
+        }
+        setIsDropdownOpen(false);
+    };
+
     return (
         <header className="header">
-            <div className="container flex-center" style={{ justifyContent: 'space-between', height: '80px', position: 'relative', zIndex: 1001 }}>
-                <Link to="/" className="logo" style={{ fontSize: '24px', fontWeight: '700', fontFamily: 'var(--font-serif)', color: 'var(--color-burgundy)', textDecoration: 'none', zIndex: 1002 }}>
+            <div className="container flex-center" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '80px', position: 'relative', zIndex: 1001 }}>
+                <Link href="/" className="logo" style={{ fontSize: '24px', fontWeight: '700', fontFamily: 'var(--font-serif)', color: 'var(--color-burgundy)', textDecoration: 'none', zIndex: 1002 }}>
                     DUALYN
                 </Link>
 
-                <div className="flex-center" style={{ gap: '20px', zIndex: 1002 }}>
+                <div className="flex-center" style={{ display: 'flex', alignItems: 'center', gap: '20px', zIndex: 1002 }}>
                     {/* Language Dropdown */}
                     <div style={{ position: 'relative' }}>
                         <button
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                             style={{
                                 background: 'none',
-                                border: `1px solid ${isMenuOpen ? 'var(--color-burgundy)' : 'var(--color-burgundy)'}`,
+                                border: `1px solid var(--color-burgundy)`,
                                 borderRadius: '9999px',
                                 padding: '8px 20px',
                                 color: 'var(--color-burgundy)',
@@ -65,7 +77,7 @@ const Header = ({ lang, setLang }) => {
                                 gap: '6px'
                             }}
                         >
-                            {languages.find(l => l.code === lang)?.label || 'EN'}
+                            {languages.find(l => l.code === currentLang)?.label || 'EN'}
                             <svg
                                 width="12"
                                 height="12"
@@ -97,25 +109,22 @@ const Header = ({ lang, setLang }) => {
                                 {languages.map((l) => (
                                     <button
                                         key={l.code}
-                                        onClick={() => {
-                                            setLang(l.code);
-                                            setIsDropdownOpen(false);
-                                        }}
+                                        onClick={() => handleLangChange(l.code)}
                                         style={{
                                             display: 'block',
                                             width: '100%',
                                             textAlign: 'left',
                                             padding: '10px 20px',
-                                            background: lang === l.code ? '#fafafa' : 'white',
-                                            color: lang === l.code ? 'var(--color-burgundy)' : '#333',
+                                            background: currentLang === l.code ? '#fafafa' : 'white',
+                                            color: currentLang === l.code ? 'var(--color-burgundy)' : '#333',
                                             border: 'none',
-                                            fontWeight: lang === l.code ? '700' : '400',
+                                            fontWeight: currentLang === l.code ? '700' : '400',
                                             cursor: 'pointer',
                                             fontSize: '14px',
                                             transition: 'background 0.2s'
                                         }}
                                         onMouseEnter={(e) => e.target.style.background = '#f5f5f5'}
-                                        onMouseLeave={(e) => e.target.style.background = lang === l.code ? '#fafafa' : 'white'}
+                                        onMouseLeave={(e) => e.target.style.background = currentLang === l.code ? '#fafafa' : 'white'}
                                     >
                                         {l.label}
                                     </button>
@@ -171,9 +180,9 @@ const Header = ({ lang, setLang }) => {
                     textAlign: 'center'
                 }}>
                     {menuItems.map((item, index) => (
-                        <a
+                        <div
                             key={index}
-                            onClick={() => handleNavigation(item.path)} // Use navigate for internal routing
+                            onClick={() => handleNavigation(item.path)}
                             style={{
                                 fontSize: 'clamp(2rem, 5vw, 3.5rem)',
                                 fontFamily: 'var(--font-serif)',
@@ -191,7 +200,7 @@ const Header = ({ lang, setLang }) => {
                             onMouseLeave={(e) => e.target.style.fontStyle = 'normal'}
                         >
                             {item.label}
-                        </a>
+                        </div>
                     ))}
                 </nav>
 
@@ -206,18 +215,18 @@ const Header = ({ lang, setLang }) => {
                 </div>
             </div>
 
-            <style>{`
-        .header {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background: rgba(255, 255, 255, 0.9);
-          backdrop-filter: blur(10px);
-          z-index: 1000;
-          border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-      `}</style>
+            <style jsx global>{`
+                .header {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    background: rgba(255, 255, 255, 0.9);
+                    backdrop-filter: blur(10px);
+                    z-index: 1000;
+                    border-bottom: 1px solid rgba(0,0,0,0.05);
+                }
+            `}</style>
         </header>
     );
 };

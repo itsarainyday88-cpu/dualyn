@@ -1,0 +1,41 @@
+/* [project]/dualyn-app/src/app/globals.css [app-client] (css) */
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+:root {
+  --color-burgundy: #800020;
+  --font-serif: "Times New Roman", serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.bg-light-rose {
+  background-color: #fff0f5;
+}
+
+/*# sourceMappingURL=dualyn-app_src_app_globals_b335bb61.css.map*/
