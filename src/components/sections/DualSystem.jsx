@@ -102,10 +102,10 @@ const DualSystem = ({ lang: propLang }) => {
                             padding: '40px 20px',
                             borderRadius: '16px',
                             boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-                            borderTop: '4px solid var(--color-burgundy)',
+                            borderTop: `4px solid ${item.highlight ? 'var(--color-orange)' : 'var(--color-burgundy)'}`, /* Conditional Border Color */
                             textAlign: 'center'
                         }}>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '16px', color: 'var(--color-burgundy)' }}>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '16px', color: item.highlight ? 'var(--color-orange)' : 'var(--color-burgundy)' /* Conditional Text Color */ }}>
                                 {item.title}
                             </h3>
                             <p style={{ color: 'var(--color-text)', opacity: 0.8 }}>{item.desc}</p>

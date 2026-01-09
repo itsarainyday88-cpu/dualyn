@@ -77,11 +77,8 @@ const Evidence = ({ lang: propLang }) => {
                                         <span style={{ fontSize: '1rem', fontWeight: '700' }}>42.5% ± 3.2</span>
                                     </div>
                                     <div style={{ width: '100%', background: '#eee', height: '24px', borderRadius: '12px', position: 'relative', overflow: 'visible' }}>
-                                        <div style={{ width: '42.5%', height: '100%', background: '#999', borderRadius: '12px 0 0 12px', position: 'relative' }}>
-                                            {/* Error Bar: Line */}
-                                            <div style={{ position: 'absolute', right: '-15px', top: '50%', marginTop: '-1px', width: '15px', height: '2px', background: '#666' }}></div>
-                                            {/* Error Bar: Cap */}
-                                            <div style={{ position: 'absolute', right: '-15px', top: '50%', marginTop: '-6px', width: '2px', height: '12px', background: '#666' }}></div>
+                                        <div style={{ width: '42.5%', height: '100%', background: 'linear-gradient(90deg, #ffe0b2, #ffcc80)', borderRadius: '12px 0 0 12px', position: 'relative' }}>
+                                            {/* Error Bar Removed */}
                                         </div>
                                     </div>
                                 </div>
@@ -93,11 +90,8 @@ const Evidence = ({ lang: propLang }) => {
                                         <span style={{ fontSize: '1.2rem', fontWeight: '700' }}>98.7% ± 1.5</span>
                                     </div>
                                     <div style={{ width: '100%', background: '#eee', height: '24px', borderRadius: '12px', position: 'relative', overflow: 'visible' }}>
-                                        <div style={{ width: '98.7%', height: '100%', background: 'linear-gradient(90deg, var(--color-burgundy), var(--color-orange))', borderRadius: '12px 0 0 12px', position: 'relative' }}>
-                                            {/* Error Bar: Line */}
-                                            <div style={{ position: 'absolute', right: '-10px', top: '50%', marginTop: '-1px', width: '10px', height: '2px', background: '#333' }}></div>
-                                            {/* Error Bar: Cap */}
-                                            <div style={{ position: 'absolute', right: '-10px', top: '50%', marginTop: '-6px', width: '2px', height: '12px', background: '#333' }}></div>
+                                        <div style={{ width: '98.7%', height: '100%', background: 'linear-gradient(90deg, #ffb74d, var(--color-orange))', borderRadius: '12px 0 0 12px', position: 'relative' }}>
+                                            {/* Error Bar Removed */}
                                         </div>
                                     </div>
                                 </div>

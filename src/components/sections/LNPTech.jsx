@@ -142,10 +142,10 @@ const LNPTech = ({ lang: propLang }) => {
                                 gap: '60px',
                                 alignItems: 'center'
                             }}>
-                                {/* Liposome (Old) */}
-                                <div style={{ opacity: 0.4, transform: 'scale(0.8)' }}>
+                                {/* Liposome (Old) - Now visually larger as requested */}
+                                <div style={{ opacity: 0.4 }}> {/* Removed scale(0.8) */}
                                     <div style={{
-                                        width: '150px', height: '150px',
+                                        width: '180px', height: '180px', /* Increased from 150px */
                                         borderRadius: '50%', border: '4px dashed #999',
                                         display: 'flex', alignItems: 'center', justifyContent: 'center'
                                     }}>
@@ -157,10 +157,10 @@ const LNPTech = ({ lang: propLang }) => {
                                 {/* Arrow */}
                                 <div style={{ fontSize: '2rem', color: 'var(--color-burgundy)' }}>➔</div>
 
-                                {/* LNP (New) */}
-                                <div>
+                                {/* LNP (New) - Now visually smaller as requested */}
+                                <div style={{ transform: 'scale(0.8)' }}> {/* Added scale(0.8) */}
                                     <div style={{
-                                        width: '180px', height: '180px',
+                                        width: '150px', height: '150px', /* Decreased from 180px */
                                         borderRadius: '50%',
                                         background: 'radial-gradient(circle at 30% 30%, #f2d5d7, var(--color-burgundy))',
                                         boxShadow: '0 10px 30px rgba(99, 13, 22, 0.3)',
