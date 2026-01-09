@@ -27,6 +27,16 @@ const LNPTech = ({ lang: propLang }) => {
                 { title: "Biocompatibility", eng: "Skin Friendly" }
             ]
         },
+        cn: {
+            title: "超越成分，\n输送技术的创新",
+            subtitle: "第三代输送系统",
+            desc: "超越脂质体的局限，第三代LNP技术\n将DUALYN的双层成分精确输送穿过角质层到达基底层。",
+            features: [
+                { title: "卓越稳定性", eng: "分子稳定性" },
+                { title: "高细胞摄取率", eng: "吸收增强" },
+                { title: "生物相容性", eng: "亲肤性" }
+            ]
+        },
         th: {
             title: "เหนือกว่าส่วนผสม\nนวัตกรรมแห่งการส่งผ่าน",
             subtitle: "ระบบส่งผ่านรุ่นที่ 3",

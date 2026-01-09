@@ -16,6 +16,11 @@ const Hero = ({ lang: propLang }) => {
             title: "Cherish Today’s Reflection, Anticipate Tomorrow’s Resilience.",
             desc: "Redefining the standard of regeneration."
         },
+        cn: {
+            subtitle: "新标准",
+            title: "珍惜今日的容颜，\n期待明日的韧性。",
+            desc: "重新定义再生的标准。"
+        },
         th: {
             subtitle: "มาตรฐานใหม่",
             title: "ชื่นชมเงาสะท้อนของวันนี้\nรอคอยความยืดหยุ่นของวันพรุ่งนี้",

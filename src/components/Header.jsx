@@ -18,6 +18,7 @@ const Header = () => {
     const languages = [
         { code: 'en', label: 'EN' },
         { code: 'kr', label: 'KR' },
+        { code: 'cn', label: 'CN' },
         { code: 'th', label: 'TH' },
         { code: 'ar', label: 'AR' },
         { code: 'vn', label: 'VN' },

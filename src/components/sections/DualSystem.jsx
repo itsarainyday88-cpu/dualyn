@@ -26,6 +26,16 @@ const DualSystem = ({ lang: propLang }) => {
                 { title: "Vitamin B12", desc: "Activates cell energy metabolism", highlight: true }
             ]
         },
+        cn: {
+            subtitle: "双重系统",
+            title: "即效 & 持久",
+            items: [
+                { title: "microPDRN", desc: "诱导初期细胞反应" },
+                { title: "PN", desc: "长期组织改善" },
+                { title: "Multi-HA", desc: "即刻补水 + 持续保湿" },
+                { title: "Vitamin B12", desc: "激活细胞能量代谢", highlight: true }
+            ]
+        },
         th: {
             subtitle: "ระบบคู่ขนาน",
             title: "เห็นผลทันที & ยั่งยืน",

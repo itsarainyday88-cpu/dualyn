@@ -31,6 +31,17 @@ const CoreTech = ({ lang: propLang }) => {
                 { icon: <Activity size={24} />, title: "Regeneration", desc: "Maximized cell response" }
             ]
         },
+        cn: {
+            subtitle: "核心技术",
+            headline: "microPDRN™ (微分子PDRN)",
+            keyMessage: "我们不只是添加成分。\n我们重新设计吸收结构。",
+            comparison: { conventional: "传统PDRN (表面受阻)", micro: "microPDRN™ (深层渗透)" },
+            features: [
+                { icon: <Microscope size={24} />, title: "25bp", desc: "25bp以下的微细结构" },
+                { icon: <Zap size={24} />, title: "Speed", desc: "卓越的吸收速度" },
+                { icon: <Activity size={24} />, title: "Regeneration", desc: "最大化细胞反应" }
+            ]
+        },
         th: {
             subtitle: "เทคโนโลยีหลัก",
             headline: "microPDRN™",

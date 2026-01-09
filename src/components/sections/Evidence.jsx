@@ -15,8 +15,14 @@ const Evidence = ({ lang: propLang }) => {
         en: {
             subtitle: "Evidence",
             title: "Proven Results",
-            desc: "Accelerated tissue recovery through the synergy of HA+PN.",
-            chart: "Cell Migration Rate Comparison (Wound Healing Assay)"
+            desc: "In-vitro tests confirmed a significant increase in cell migration rate using microPDRN compared to the control group.",
+            chart: "Cell Migration Rate Comparison"
+        },
+        cn: {
+            subtitle: "实证",
+            title: "验证结果",
+            desc: "体外测试证实，与对照组相比，使用 microPDRN 的细胞迁移率显著增加。",
+            chart: "细胞迁移率比较"
         },
         th: {
             subtitle: "หลักฐาน",

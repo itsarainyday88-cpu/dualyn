@@ -16,6 +16,11 @@ const Philosophy = ({ lang: propLang }) => {
             headline: "Beyond Ingredients",
             body: "Countless ingredients are used for skin regeneration. However, we ask: 'How much of this ingredient is actually delivered to the skin?' DUALYN focuses on the delivery structure, not just the ingredient levels."
         },
+        cn: {
+            subtitle: "品牌哲学",
+            headline: "超越成分",
+            body: "无数成分被用于皮肤再生。然而，我们要问：‘这些成分通过皮肤实际吸收了多少？’ DUALYN 专注于输送结构，而不仅仅是成分含量。"
+        },
         th: {
             subtitle: "ปรัชญา",
             headline: "มากกว่าส่วนผสม",
