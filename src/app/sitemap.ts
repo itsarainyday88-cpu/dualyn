@@ -1,5 +1,5 @@
 export default function sitemap() {
-    const baseUrl = 'https://dualyn.com';
+    const baseUrl = 'https://dualyn-bijou.com';
 
     return [
         {

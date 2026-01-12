@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata = {
-    metadataBase: new URL('https://dualyn.com'),
+    metadataBase: new URL('https://dualyn-bijou.com'),
     title: {
         default: 'DUALYN - Premium Skin Booster',
         template: '%s | DUALYN',
@@ -40,6 +40,7 @@ export const metadata = {
         canonical: '/',
     },
     verification: {
+        google: 'iTq6dwlMMmwGxUJDkXcyzfx8EBj500YhLWxPeCYsry0',
         other: {
             // 'naver-site-verification': 'YOUR_VERIFICATION_CODE', // Uncomment and add code if available
         },
