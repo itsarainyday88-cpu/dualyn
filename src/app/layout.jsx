@@ -40,7 +40,7 @@ export const metadata = {
         canonical: '/',
     },
     verification: {
-        google: 'iTq6dwlMMmwGxUJDkXcyzfx8EBj500YhLWxPeCYsry0',
+        google: '5FwD5E-EiJHtWupncuuIIpxhjLust7LwKTkIG-fB8e0',
         other: {
             // 'naver-site-verification': 'YOUR_VERIFICATION_CODE', // Uncomment and add code if available
         },
