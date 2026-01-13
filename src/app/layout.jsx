@@ -42,7 +42,7 @@ export const metadata = {
     verification: {
         google: '5FwD5E-EiJHtWupncuuIIpxhjLust7LwKTkIG-fB8e0',
         other: {
-            // 'naver-site-verification': 'YOUR_VERIFICATION_CODE', // Uncomment and add code if available
+            'naver-site-verification': 'b2ffb9940e964746c3934eee64c5a36c74e4f36f',
         },
     },
 };
